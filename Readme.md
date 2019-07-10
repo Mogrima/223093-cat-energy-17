@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Кристина Скочнягина](https://up.htmlacademy.ru/adaptive/17/user/223093).
-* Наставник: `Анастасия Полозова`(https://htmlacademy.ru/profile/id258631).
+* Наставник: [Анастасия Полозова](https://htmlacademy.ru/profile/id258631).
 
 ---
 
