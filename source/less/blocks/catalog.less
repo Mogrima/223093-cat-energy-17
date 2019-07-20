@@ -21,8 +21,7 @@
   margin-bottom: 35px;
   padding-left: 90px;
   font-weight: normal;
-  font-size: 24px;
-  line-height: 37px;
+  .title(@title: @fz-subtitle, @lh: @lh-titleLess);
   color: @title-dark;
   text-transform: uppercase;
 }
@@ -33,15 +32,13 @@
   padding-left: 22px;
   padding-bottom: 20px;
   .ff-text();
-  font-size: 14px;
-  line-height: 18px;
+  line-height: @lh-text;
   border-bottom: 1px solid @border-color;
 }
 
 .catalog__link {
   padding-left: 20px;
-  font-size: 16px;
-  line-height: 16px;
+  .link(@lh: @lh-small);
   color: @title-dark;
   text-transform: uppercase;
   text-decoration: none;
