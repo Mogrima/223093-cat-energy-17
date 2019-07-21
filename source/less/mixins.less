@@ -10,3 +10,18 @@
 .ff-text() {
   font-family: "Arial", "Helvetica Neue", "Helvetica", sans-serif;
 }
+
+.title(@title: @fz-title, @lh: @lh-title) {
+  font-size: @title;
+  line-height: @lh;
+}
+
+.link(@fz: @fz-link, @lh: @lh-link) {
+  font-size: @fz; //  16px
+  line-height: @lh; // 20px
+}
+
+.text(@fz: @fz-small, @lh: @lh-small) {
+  font-size: @fz; //  12px
+  line-height: @lh; // 16px
+}
