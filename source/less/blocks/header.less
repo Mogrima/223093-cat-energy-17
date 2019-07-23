@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__logo {
+  width: 192px;
+}
+
+@media(min-width: @tablet-width) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .header__logo {
+    width: 180px;
+  }
+}
+
+@media(min-width: @desktop-width) {
+  .header__logo {
+    width: 202px;
+  }
+}
