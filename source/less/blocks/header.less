@@ -1,4 +1,4 @@
-.header {
+.header__wrapper {
   display: flex;
   flex-direction: column;
 }
@@ -8,9 +8,11 @@
 }
 
 @media (min-width: @tablet-width) {
-  .header {
+  .header__wrapper {
     flex-direction: row;
     justify-content: space-between;
+    width: @tablet-box;
+    margin: 0 auto;
   }
 
   .header__logo {
@@ -19,6 +21,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .header__wrapper {
+    width: @desktop-box;
+  }
+
   .header__logo {
     width: 202px;
   }
