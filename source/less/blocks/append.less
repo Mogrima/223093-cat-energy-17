@@ -26,11 +26,12 @@
 }
 
 @media (min-width: @tablet-width) {
+
   .append {
     width: 324px;
     padding-top: 55px;
-    border-top: 1px solid #e6e6e6;
-    border-bottom: 1px solid #e6e6e6;
+    border-top: 1px solid @border-input;
+    border-bottom: 1px solid @border-input;
   }
 
   .append__more {
@@ -40,14 +41,13 @@
   .append__title {
     margin-bottom: 24px;
     padding: 0 90px;
-    font-size: 20px;
-    line-height: 20px;
+    font-size: @fz-nav;
   }
 
   .append__text {
     margin-bottom: 83px;
     padding: 0 50px;
-    font-size: 16px;
+    font-size: @fz-link;
   }
 
   .append__to-all {
