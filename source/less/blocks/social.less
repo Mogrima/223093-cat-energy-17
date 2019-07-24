@@ -1,7 +1,47 @@
-.social__list {
-  margin: 0;
-  padding: 25px 0;
-  list-style: none;
+.social {
   border-top: 1px solid @border-color;
   border-bottom: 1px solid @border-color;
+}
+
+.social__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 135px;
+  margin: 0 auto;
+  padding: 25px 0;
+  list-style: none;
+}
+
+.social__icon {
+  path {
+    fill: @icon-color;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .social {
+    border: none;
+  }
+
+  .social__list {
+    padding: 0;
+  }
+
+  .social__icon {
+    &--vk {
+      width: 30px;
+      height: 16px;
+    }
+
+    &--inst {
+      width: 23px;
+      height: 23px;
+    }
+
+    &--fb {
+      width: 14px;
+      height: 28px;
+    }
+  }
 }
