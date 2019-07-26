@@ -1,5 +1,5 @@
 .gift {
-  width: 280px;
+  width: @mobile-box;
   min-height: 289px;
   background-color: @bg-button;
   background-image: url("../../img/gift-photo-mobile@1x.jpg");
@@ -7,9 +7,38 @@
 }
 
 .gift__text {
+  margin: 0;
   padding: 185px 60px 0 60px;
   .ff-text();
   .link();
   color: @text-light;
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .gift {
+    width: @tablet-box;
+    min-height: 200px;
+    background-image: url("../../img/gift-photo-tablet@1x.jpg");
+  }
+
+  .gift__text {
+    width: 165px;
+    padding-top: 73px;
+    padding-left: 422px;
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .gift {
+    width: 245px;
+    min-height: 289px;
+    background-image: url("../../img/gift-photo-desktop@1x.jpg");
+  }
+
+  .gift__text {
+    padding: 188px 40px 0 40px;
+    text-align: center;
+  }
 }
