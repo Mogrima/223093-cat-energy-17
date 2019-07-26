@@ -1,11 +1,18 @@
 .promo {
+  display: flex;
+  flex-direction: column;
+  width: @mobile-box;
+  margin: 0 auto;
+  text-align: center;
   background-color: @bg-colorpromo;
-  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-image: linear-gradient(to top, #ffffff 175px, transparent 175px), url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-position: center 3px;
 }
 
 .promo__title {
-  padding-top: 25px;
+  margin-bottom: 23px;
+  padding-top: 28px;
 }
 
 .promo__slogan {
@@ -14,4 +21,62 @@
   line-height: @lh-promo;
   color: @text-light;
   text-transform: uppercase;
+}
+
+.promo__image {
+  width: 280px;
+  height: 271px;
+}
+
+.promo__button {
+  margin-top: 6px;
+}
+
+@media (min-width: @tablet-width) {
+  .promo {
+    position: relative;
+    box-sizing: border-box;
+    width: @tablet-box;
+    padding-right: 208px;
+    padding-bottom: 532px;
+    text-align: left;
+    background-color: transparent;
+    background-image: none;
+  }
+
+  .promo__slogan {
+    .text(@fz: 20px, @lh: 20px);
+    color: @title-dark;
+  }
+
+  .promo__image {
+    position: absolute;
+    top: 230px;
+    left: -52px;
+    z-index: -10;
+    width: 709px;
+    height: 609px;
+  }
+
+  .promo__button {
+    margin-top: 44px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo {
+    width: @desktop-box;
+    padding: 0 726px 189px 80px;
+  }
+
+  .promo__title {
+    padding-top: 81px;
+  }
+
+  .promo__image {
+    top: 29px;
+    left: 537px;
+    width: 552px;
+    height: 499px;
+  }
 }

@@ -1,3 +1,8 @@
+.append {
+  padding: 25px 0;
+  text-align: center;
+}
+
 .append__more {
   margin-bottom: 25px;
 }
@@ -18,4 +23,47 @@
 
 .append__to-all {
   margin-bottom: 25px;
+}
+
+@media (min-width: @tablet-width) {
+  .append {
+    width: 324px;
+    padding-top: 55px;
+    border-top: 1px solid @border-input;
+    border-bottom: 1px solid @border-input;
+  }
+
+  .append__more {
+    margin-bottom: 50px;
+  }
+
+  .append__title {
+    margin-bottom: 24px;
+    padding: 0 90px;
+    font-size: @fz-nav;
+  }
+
+  .append__text {
+    margin-bottom: 83px;
+    padding: 0 50px;
+    font-size: @fz-link;
+  }
+
+  .append__to-all {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .append {
+    width: 245px;
+  }
+
+  .append__title {
+    padding: 0 50px;
+  }
+
+  .append__text {
+    padding: 0 39px;
+  }
 }
