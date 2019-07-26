@@ -20,3 +20,44 @@
   color: @title-dark;
   text-transform: uppercase;
 }
+
+@media (min-width: @tablet-width) {
+  .stats {
+    width: @tablet-box;
+  }
+
+  .stats tbody {
+    display: flex;
+  }
+
+  .stats__item-food {
+    margin: 0 0 0 auto;
+  }
+
+  .stats__value {
+    .title(@title: 30px, @lh: 37px);
+  }
+
+  .stats__field {
+    .text(@fz: 14px, @lh: 14px);
+  }
+
+  .stats__field-food,
+  .stats__value-food {
+    .title(@title: 20px, @lh: 20px);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .stats {
+    width: auto;
+  }
+
+  .stats tbody {
+    flex-wrap: wrap;
+  }
+
+  .stats__item-food {
+    margin-left: 0;
+  }
+}
