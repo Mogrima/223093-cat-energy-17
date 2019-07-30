@@ -10,7 +10,7 @@
 }
 
 .form__desc {
-  margin: 0 0 40px 0;
+  margin: 0 0 40px 20px;
   padding-top: 35px;
   line-height: @lh-text;
   color: @title-dark;
@@ -116,8 +116,7 @@
 
 // for checkbox form
 .form__add-wrapper {
-  display: flex;
-  flex-direction: column;
+  display: block;
 }
 
 .form__label-check {
@@ -207,8 +206,10 @@
   }
 
   .form__desc {
+    width: 325px;
+    margin-left: 30px;
     margin-bottom: 65px;
-    padding: 56px 330px 0 0;
+    padding-top: 56px;
     .text(@fz: 20px, @lh: 30px);
   }
 
@@ -253,6 +254,7 @@
 
   // for radio form
   .form__item-radio {
+    box-sizing: border-box;
     padding: 25px 0 25px 30px;
     border: 1px solid @border-input;
   }
@@ -263,7 +265,7 @@
 
   // for checkbox form
   .form__add-wrapper {
-    flex-direction: row;
+    display: flex;
     flex-wrap: wrap;
   }
 
@@ -284,7 +286,7 @@
   }
 
   .form__desc {
-    padding-right: 840px;
+    margin-left: 40px;
   }
 
   .form__wrapper {
@@ -295,10 +297,6 @@
   .form__item {
     &--border {
       width: 570px;
-
-      &:first-child {
-        margin-right: 80px;
-      }
     }
   }
 
