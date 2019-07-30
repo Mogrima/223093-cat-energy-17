@@ -1,22 +1,22 @@
 .promo {
   display: flex;
   flex-direction: column;
-  width: @mobile-box;
+  width: @modile-width;
   margin: 0 auto;
   text-align: center;
   background-color: @bg-colorpromo;
   background-image: linear-gradient(to top, #ffffff 175px, transparent 175px), url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center 3px;
+  background-position: center 0;
 }
 
 .promo__title {
-  margin-bottom: 23px;
-  padding-top: 28px;
+  margin-bottom: 25px;
+  padding-top: 27px;
 }
 
 .promo__slogan {
-  margin-bottom: 25px;
+  margin-bottom: 28px;
   font-weight: normal;
   line-height: @lh-promo;
   color: @text-light;
@@ -29,12 +29,13 @@
 }
 
 .promo__button {
-  margin-top: 6px;
+  margin: 0 auto;
 }
 
 @media (min-width: @tablet-width) {
   .promo {
     position: relative;
+    box-sizing: border-box;
     width: @tablet-box;
     padding-right: 208px;
     padding-bottom: 532px;
