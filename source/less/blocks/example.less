@@ -1,4 +1,6 @@
 .example {
+  width: @mobile-box;
+  margin: 0 auto;
   background-color: @bg-color;
 }
 
@@ -7,12 +9,62 @@
 }
 
 .example__desc {
-  margin: 0;
-  margin-bottom: 24px;
+  margin: 0 0 24px 0;
+  padding-right: 14px;
   .ff-text();
   line-height: @lh-text;
 }
 
 .example__sheets {
   margin-bottom: 40px;
+}
+
+@media (min-width: @tablet-width) {
+  .example {
+    width: @tablet-box;
+    background-color: @bg-light;
+  }
+
+  .example__title {
+    margin-bottom: 61px;
+  }
+
+  .example__desc {
+    margin-bottom: 55px;
+    padding-right: 32px;
+    .text(@fz: 16px, @lh: 24px);
+  }
+
+  .example__sheets {
+    margin-bottom: 78px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example {
+    width: @desktop-box;
+  }
+
+  .example__wrapper {
+    display: flex;
+    padding: 74px 0 71px 0;
+    background-color: @bg-color;
+  }
+
+  .example__item {
+    width: 570px;
+    margin-right: 80px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .example__desc {
+    padding-right: 135px;
+  }
+
+  .example__sheets {
+    margin-bottom: 0;
+  }
 }

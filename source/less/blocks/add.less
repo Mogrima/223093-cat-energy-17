@@ -1,8 +1,10 @@
 .add {
-  display: none;
+  width: @mobile-box;
+  margin: 0 auto;
 }
 
 .add__title {
+  margin: 0 0 31px 0;
   font-weight: normal;
   .title(@title: @fz-subtitle, @lh: @lh-value);
   color: @title-dark;
@@ -14,12 +16,127 @@
 }
 
 .add__table-title {
+  flex-grow: 1;
+  width: 100%;
+  margin-bottom: 10px;
   .ff-reg();
   .link(@lh: @lh-small);
   color: @title-table;
   text-transform: uppercase;
 }
 
+.add__table-value {
+  margin-bottom: 13px;
+  padding: 0;
+}
+
+.add__table-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 14px 0 18px 0;
+  border-bottom: 1px solid @border-table;
+
+  &:first-child {
+    border-top: 1px solid @border-table;
+  }
+}
+
 .add__gift {
   margin-top: 40px;
+}
+
+@media (min-width: @tablet-width) {
+  .add {
+    width: @tablet-box;
+  }
+
+  .add__title {
+    margin-bottom: 77px;
+    .title(@title: 37px, @lh: 37px);
+  }
+
+  .add__table {
+    width: 100%;
+    padding: 0 38px;
+  }
+
+  .add__table-item {
+    padding: 27px 0;
+    border-bottom-color: @border-color;
+
+    &:first-child {
+      border-top-color: @border-color;
+    }
+
+    &:last-child {
+      border-bottom-color: @border-input;
+    }
+  }
+
+  .add__table-title {
+    flex-grow: 0;
+    width: auto;
+    margin-right: auto;
+    .title(@title: 20px, @lh: 20px);
+  }
+
+  .add__table-value {
+    margin: 0 0 22px 53px;
+    .link();
+  }
+
+  .add__table-button {
+    flex-grow: 1;
+    width: 635px;
+  }
+
+  .add__gift {
+    margin-top: 70px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .add {
+    width: @desktop-box;
+    padding: 0 40px;
+  }
+
+  .add__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .add__table {
+    width: 895px;
+    padding: 0;
+  }
+
+  .add__table-item {
+    align-items: center;
+    padding: 14px 0;
+  }
+
+  .add__table-title {
+    width: 245px;
+    margin: 0;
+  }
+
+  .add__table-value {
+    width: 245px;
+    margin: 0;
+
+    &--small {
+      width: 45px;
+    }
+  }
+
+  .add__table-button {
+    flex-grow: 0;
+    width: 245px;
+  }
+
+  .add__gift {
+    margin-top: 0;
+  }
 }

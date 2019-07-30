@@ -226,43 +226,47 @@
         <h2 class="add__title">Дополнительные товары</h2>
         <div class="add__wrapper">
           <table class="add__table">
-            <tr>
+            <tr class="add__table-item">
               <td class="add__table-title">Сахарозаменитель</td>
               <td class="add__table-value">1 упаковка (100 г)</td>
-              <td class="add__table-value">200 Р.</td>
-              <td class="add__table-order"><button class="button">Заказать</button></td>
+              <td class="add__table-value add__table-value--small">200 Р.</td>
+              <td class="add__table-order"><button class="button add__table-button">Заказать</button></td>
             </tr>
-            <tr>
+            <tr class="add__table-item">
               <td class="add__table-title">Питьевая вода</td>
               <td class="add__table-value">5 литров</td>
-              <td class="add__table-value">50 Р.</td>
-              <td class="add__table-order"><button class="button">Заказать</button></td>
+              <td class="add__table-value add__table-value--small">50 Р.</td>
+              <td class="add__table-order"><button class="button add__table-button">Заказать</button></td>
             </tr>
-            <tr>
+            <tr class="add__table-item">
               <td class="add__table-title">Молоко</td>
               <td class="add__table-value">1 литр</td>
-              <td class="add__table-value">100 Р.</td>
-              <td class="add__table-order"><button class="button">Заказать</button></td>
+              <td class="add__table-value add__table-value--small">100 Р.</td>
+              <td class="add__table-order"><button class="button add__table-button">Заказать</button></td>
             </tr>
-            <tr>
+            <tr class="add__table-item">
               <td class="add__table-title">Витамины</td>
               <td class="add__table-value">1 упаковка (30 г)</td>
-              <td class="add__table-value">300 Р.</td>
-              <td class="add__table-order"><button class="button">Заказать</button></td>
+              <td class="add__table-value add__table-value--small">300 Р.</td>
+              <td class="add__table-order"><button class="button add__table-button">Заказать</button></td>
             </tr>
           </table>
           <div class="add__gift gift">
-            <p class="gift__text">Закажите все и получите чехол для кота в подарок!</p>
+            <p class="gift__text">Закажите все и&nbsp;получите чехол для кота в подарок!</p>
           </div>
         </div>
       </section>
       <section class="map">
         <div class="map__header">
           <h3 class="map__title">Приглашаем к сотрудничеству дилеров!</h3>
-          <address class="map__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+          <address class="map__text">ул. Большая Конюшенная, д. 19/8 <span class="map__city">Санкт-Петербург</span></address>
         </div>
-        <img class="map__image" src="img/bg-map-mobile@1x.png" width="320" height="362"
-          alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+        <picture>
+            <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png">
+            <img class="map__image" src="img/bg-map-mobile@1x.png" width="320" height="362"
+            alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+        </picture>
       </section>
     </main>
     <footer class="footer">
