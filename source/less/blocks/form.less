@@ -1,4 +1,4 @@
-// Общие стили для формы
+// common styles for the form
 .form {
   width: @modile-width;
   margin: 0 auto;
@@ -83,7 +83,7 @@
   text-align: center;
 }
 
-// для текстовых инпутов
+// for text input
 .form__label-input {
   display: flex;
   justify-content: space-between;
@@ -100,35 +100,43 @@
   margin-right: 15px;
 }
 
-// для радио
+// for radio form
+.form__item-radio {
+  padding-top: 20px;
+}
+
 .form__label-radio {
-  padding: 25px 0 0 47px;
-}
-
-// для чекбоксов
-.form__add-wrapper {
   display: flex;
-  flex-direction: column;
-}
-
-.form__label-check {
-  margin-bottom: 26px;
-  padding-left: 46px;
+  align-items: center;
+  margin-bottom: 13px;
 
   &:last-child {
     margin-bottom: 0;
   }
 }
 
-// костомные радиобаттоны и чекбоксы
-.form__radio-indicator {
-  position: absolute;
-  top: 19px;
-  left: 0;
+// for checkbox form
+.form__add-wrapper {
+  display: flex;
+  flex-direction: column;
+}
 
+.form__label-check {
+  display: flex;
+  align-items: center;
+  margin-bottom: 26px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// custom radio beats and checkboxes
+.form__radio-indicator {
   box-sizing: border-box;
   width: 30px;
   height: 30px;
+  margin-right: 17px;
 
   background-color: @bg-light;
   border-radius: 50%;
@@ -151,9 +159,7 @@
 }
 
 .form__checkbox-indicator {
-  position: absolute;
-  top: -3px;
-  left: 4px;
+  margin-right: 16px;
 
   box-sizing: border-box;
   width: 30px;
@@ -189,8 +195,7 @@
 }
 
 @media (min-width: @tablet-width) {
-
-  // Общие стили для формы
+  // common styles for the form
   .form {
     width: @tablet-width;
   }
@@ -200,13 +205,7 @@
     flex-wrap: wrap;
     box-sizing: border-box;
     width: @tablet-box;
-  }
-
-  .form__item-radio {
-    box-sizing: border-box;
-    width: 630px;
-    padding: 35px 0 35px 27px;
-    border: 1px solid @border-input;
+    padding: 0 40px;
   }
 
   .form__main-title {
@@ -258,7 +257,18 @@
     font-size: 16px;
   }
 
-  // для чекбоксов
+  // for radio form
+  .form__item-radio {
+    box-sizing: border-box;
+    padding: 25px 0 25px 30px;
+    border: 1px solid @border-input;
+  }
+
+  .form__label-radio {
+    margin-bottom: 13px;
+  }
+
+  // for checkbox form
   .form__add-wrapper {
     flex-direction: row;
     flex-wrap: wrap;
@@ -267,13 +277,16 @@
   .form__label-check {
     box-sizing: border-box;
     width: 50%;
-    margin-bottom: 50px;
+    margin-bottom: 32px;
+
+    &:last-child {
+      margin-bottom: 32px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
-
-  // Общие стили для формы
+  // common styles for the form
   .form {
     width: @desktop-width;
   }
@@ -284,6 +297,7 @@
 
   .form__wrapper {
     width: @desktop-box;
+    padding: 0;
   }
 
   .form__item {
@@ -308,7 +322,7 @@
     margin-left: 80px;
   }
 
-  // для текстовых инпутов
+  // for text input
   .form__owner-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -324,8 +338,8 @@
     }
   }
 
-  // для чекбоксов
-  .form__item-check {
+  // for checkbox form
+  .form__item-radio {
     margin-left: 80px;
   }
 
