@@ -28,6 +28,7 @@
     height: 60px;
     background-color: @bg-button;
     background-position: center;
+    background-repeat: no-repeat;
   }
 
   &--bio::before {
@@ -56,14 +57,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 65px 0 105px 0;
+    padding: 74px 0 105px 1px;
     margin-bottom: 45px;
   }
 
   .advantages__item {
     width: 245px;
     margin-bottom: 135px;
-    padding: 115px 109px 0 0;
+    padding: 110px 100px 0 0;
     .text(@fz: 16px, @lh: 24px);
 
     &--last {
@@ -72,7 +73,13 @@
 
     &:nth-child(2n) {
       padding-right: 79px;
-      padding-left: 30px;
+    }
+
+    &::before {
+      top: -2px;
+      left: 0;
+      width: 80px;
+      height: 80px;
     }
   }
 }
