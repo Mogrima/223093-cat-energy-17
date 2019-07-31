@@ -112,23 +112,27 @@
 
 @media (min-width: @tablet-width) {
   .nav {
-    width: 460px;
+    width: 438px;
     margin: 0;
   }
 
   .nav__list {
     display: flex;
     flex-wrap: wrap;
-
-    margin-left: -35px;
+    padding-top: 0;
   }
 
   .nav__item {
-    margin-left: 35px;
+    margin-right: 34px;
+    padding-top: 21px;
     border: none;
 
     &:first-child {
       border: none;
+    }
+
+    &:last-child {
+      margin-right: 0;
     }
 
     &--active {
@@ -136,14 +140,11 @@
 
       &::after {
         content: "";
-
         position: absolute;
         right: 0;
-        bottom: 0;
+        bottom: 12px;
         left: 0;
-
         height: 3px;
-
         background: @bg-button;
       }
     }
