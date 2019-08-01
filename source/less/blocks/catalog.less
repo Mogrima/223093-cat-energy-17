@@ -73,7 +73,7 @@
   text-transform: uppercase;
   text-decoration: none;
 
-  &::before {
+  &::after {
     content: "";
     position: absolute;
     top: 6px;
@@ -81,9 +81,10 @@
     width: 24px;
     height: 11px;
     background-image: url("../img/icon-right-arrow-long.svg");
+    background-repeat: no-repeat;
   }
 
-  &--pro::before {
+  &--pro::after {
     right: -37px;
   }
 }
@@ -141,13 +142,27 @@
   .catalog__link {
     .link(@fz: @fz-nav);
 
-    &::before {
+    &::after {
       top: 10px;
       right: -48px;
     }
 
-    &--pro::before {
+    &--pro::after {
       right: -46px;
+    }
+
+    &:hover::after {
+      right: -58px;
+      width: 33px;
+      background-image: url("../img/icon-right-arrow-verylong.svg");
+    }
+
+    &:active {
+      color: fade(@title-dark, 30%);
+    }
+
+    &:active::after {
+      opacity: 0.3;
     }
   }
 }

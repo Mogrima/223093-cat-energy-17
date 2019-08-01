@@ -21,6 +21,14 @@
     background-color: @bg-color;
     border: none;
   }
+
+  &:hover {
+    background-color: @bg-button-hvr;
+  }
+
+  &:active {
+    color: fade(@text-light, 30%);
+  }
 }
 
 @media (min-width: @tablet-width) {
