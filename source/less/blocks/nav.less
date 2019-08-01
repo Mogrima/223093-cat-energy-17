@@ -162,10 +162,21 @@
 
 @media (min-width: @desktop-width) {
   .nav {
-    width: 490px;
+    width: 478px;
+  }
+
+  .nav__item {
+    padding-top: 19px;
+
+    &::after {
+      bottom: 11px;
+      background-color: @text-light;
+    }
   }
 
   .nav__link {
     font-size: @fz-nav;
+    line-height: @lh-value;
+    color: @text-light;
   }
 }
