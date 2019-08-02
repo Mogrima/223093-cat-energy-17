@@ -16,18 +16,26 @@
     line-height: @lh-text;
   }
 
-  &--grey {
-    color: @text-dark;
-    background-color: @bg-color;
-    border: none;
-  }
-
   &:hover {
     background-color: @bg-button-hvr;
   }
 
   &:active {
     color: fade(@text-light, 30%);
+  }
+
+  &--grey {
+    color: @text-dark;
+    background-color: @bg-color;
+    border: none;
+
+    &:hover {
+      background-color: @bg-lightbtn-hvr;
+    }
+
+    &:active {
+      color: fade(@text-dark, 30%);
+    }
   }
 }
 
