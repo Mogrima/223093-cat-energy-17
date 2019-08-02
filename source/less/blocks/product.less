@@ -149,18 +149,33 @@
 @media (min-width: @desktop-width) {
   .product {
     width: @desktop-box;
+    padding-top: 68px;
   }
 
   .product__item {
     width: 245px;
+    margin-bottom: 143px;
 
-    &--mb {
+    &--mb,
+    &--last {
       margin-bottom: 0;
     }
   }
 
+  .product__info {
+    width: 245px;
+  }
+
   .product__title {
-    padding: 0 70px;
+    padding: 0 20px;
+  }
+
+  .product__photo {
+    width: 245px;
+  }
+
+  .product__sheet {
+    width: 174px;
   }
 
   .product__button {
