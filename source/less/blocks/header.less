@@ -1,6 +1,21 @@
 .header__wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
+  width: @mobile-box;
+  margin: 0 auto;
+  padding: 11px 20px 1px 20px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: @border-input;
+  }
 }
 
 .header__logo {
@@ -13,19 +28,69 @@
     justify-content: space-between;
     width: @tablet-box;
     margin: 0 auto;
+    padding: 24px 0 0 0;
   }
 
   .header__logo {
     width: 180px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+
+  .header__logo-image {
+    width: 173px;
+    height: 58px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .header {
+    &--promo {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: -10;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: calc(100% / 2);
+        height: 666px;
+        background-color: #64a83b;
+        background-image: url("../img/index-background-desktop@1x.jpg");
+        background-repeat: no-repeat;
+        background-position: 2px -30px;
+        background-size: 720px 696px;
+      }
+
+      .nav__item--active::after {
+        bottom: 11px;
+        background-color: @text-light;
+      }
+    }
+  }
+
   .header__wrapper {
     width: @desktop-box;
+
+    &::after {
+      display: none;
+    }
   }
 
   .header__logo {
     width: 202px;
+  }
+
+  .header__logo-image {
+    width: 202px;
+    height: 59px;
   }
 }

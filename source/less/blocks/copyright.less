@@ -2,15 +2,33 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  text-decoration: none;
+
+  &:hover {
+    path {
+      fill: @bg-button;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .copyright__title {
   .ff-text();
   .link(@lh: @lh-small);
+  color: @text-dark;
 }
 
 .copyright__icon {
   path {
     fill: @icon-color;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    width: 162px;
   }
 }

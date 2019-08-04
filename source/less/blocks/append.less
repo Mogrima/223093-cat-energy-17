@@ -1,14 +1,35 @@
 .append {
   padding: 25px 0;
   text-align: center;
+  border: 1px solid @border-product;
+  border-top: none;
 }
 
 .append__more {
-  margin-bottom: 25px;
+  position: relative;
+  margin-bottom: 35px;
+  border: none;
+  background-color: transparent;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 4px;
+    width: 2px;
+    height: 30px;
+    background-color: #d3d3d3;
+  }
+
+  &::after {
+    transform: rotate(90deg);
+  }
 }
 
 .append__title {
-  margin: 0 0 11px 0;
+  margin: 0 0 8px 0;
+  padding-left: 4px;
   .link();
   color: @title-dark;
   text-transform: uppercase;
@@ -16,13 +37,14 @@
 
 .append__text {
   display: block;
-  margin-bottom: 22px;
+  margin-bottom: 21px;
   .ff-text();
   .text();
 }
 
 .append__to-all {
-  margin-bottom: 25px;
+  margin: 0 auto;
+  padding-left: 3px;
 }
 
 @media (min-width: @tablet-width) {
@@ -34,18 +56,24 @@
   }
 
   .append__more {
-    margin-bottom: 50px;
+    margin-bottom: 91px;
+
+    &::before,
+    &::after {
+      left: 6px;
+      height: 60px;
+    }
   }
 
   .append__title {
-    margin-bottom: 24px;
-    padding: 0 90px;
+    margin-bottom: 29px;
+    padding: 0 90px 0 95px;
     font-size: @fz-nav;
   }
 
   .append__text {
-    margin-bottom: 83px;
-    padding: 0 50px;
+    margin-bottom: 87px;
+    padding: 0 50px 0 54px;
     font-size: @fz-link;
   }
 
@@ -64,6 +92,7 @@
   }
 
   .append__text {
+    margin-bottom: 84px;
     padding: 0 39px;
   }
 }
