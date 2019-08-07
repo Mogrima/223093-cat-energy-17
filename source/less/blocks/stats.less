@@ -1,21 +1,56 @@
+.stats {
+  padding: 0 20px;
+}
+
+.stats tbody {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .stats__item-food {
-  margin-top: 40px;
+  margin: 0 auto;
+  margin-top: 31px;
 }
 
 .stats__value {
+  box-sizing: border-box;
+  width: 123px;
+  padding: 13px 16px 16px 12px;
   font-size: @fz-value;
   line-height: @lh-value;
   color: @title-dark;
   text-transform: uppercase;
+  text-align: center;
+
+  border: 1px solid @border-table;
+  border-radius: 2px;
 }
 
 .stats__field {
+  position: absolute;
+  top: 48px;
+  box-sizing: border-box;
+  width: 87px;
+  padding: 0 10px;
   .ff-text();
   .text(@lh: 12px);
+  text-align: center;
+  background-color: @bg-color;
+
+  &--right {
+    right: 17px;
+  }
+
+  &--left {
+    left: 15px;
+  }
 }
 
 .stats__field-food,
 .stats__value-food {
+  padding: 0;
   line-height: @lh-link;
   color: @title-dark;
   text-transform: uppercase;

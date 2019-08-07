@@ -1,5 +1,63 @@
+.toggles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  width: 201px;
+  margin: 0 auto;
+  padding-left: 4px;
+}
+
 .toggle__label {
   .link();
   color: @title-dark;
   text-transform: uppercase;
+}
+
+.toggles__btn {
+  position: absolute;
+  transform: scale(0);
+}
+
+input[type="range"] {
+  box-sizing: border-box;
+  width: 84px;
+  height: 14px;
+  margin: 0;
+  padding: 0 6px;
+  border: 1px solid @border-table;
+  border-radius: 6px;
+  appearance: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  background: @bg-light;
+  cursor: pointer;
+  animate: 0.2s;
+}
+
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  background: @bg-light;
+  cursor: pointer;
+  animate: 0.2s;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  width: 35px;
+  height: 6px;
+  background: @bg-button;
+  border-radius: 3px;
+  cursor: pointer;
+  appearance: none;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 35px;
+  height: 6px;
+  background: @bg-button;
+  border-radius: 3px;
+  cursor: pointer;
+  appearance: none;
 }
