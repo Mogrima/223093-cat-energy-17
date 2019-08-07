@@ -6,7 +6,7 @@
 
 .nav__toggle {
   position: absolute;
-  top: -37px;
+  top: -39px;
   right: 0;
   z-index: 2;
   display: block;
@@ -100,16 +100,6 @@
       color: fade(@title-dark, 30%);
     }
   }
-
-  &--index[href] {
-    &:hover {
-      color: fade(@text-light, 60%);
-    }
-
-    &:active {
-      color: fade(@text-light, 30%);
-    }
-  }
 }
 
 @media (max-width: @mobile-width-only) {
@@ -189,6 +179,16 @@
 
     &--index {
       color: @text-light;
+    }
+
+    &--index[href] {
+      &:hover {
+        color: fade(@text-light, 60%);
+      }
+  
+      &:active {
+        color: fade(@text-light, 30%);
+      }
     }
   }
 }
