@@ -3,7 +3,7 @@
   justify-content: space-between;
   width: @mobile-box;
   margin: 0 auto 25px auto;
-  padding-top: 29px;
+  padding-top: 30px;
 }
 
 .map__title {
@@ -29,20 +29,23 @@
 
 @media (min-width: @tablet-width) {
   .map__header {
+    box-sizing: border-box;
     width: @tablet-box;
-    padding-right: 42px;
-    padding-left: 42px;
+    margin-bottom: 57px;
+    padding: 30px 42px 0 41px;
   }
 
   .map__title {
     width: 192px;
     margin-right: 0;
+    padding-top: 2px;
     .title(@title: 20px, @lh: 25px);
   }
 
   .map__text {
     width: 192px;
     font-size: 16px;
+    text-align: right;
   }
 
   .map__city {
@@ -51,6 +54,7 @@
   }
 
   .map__image {
+    width: 768px;
     height: 398px;
   }
 }
