@@ -5,6 +5,7 @@
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
@@ -12,17 +13,17 @@
       <include src="build/img/sprite.svg"></include>
     </div>
     <header class="header">
-      <div class="header__wrapper">
+      <div class="header__wrapper header__wrapper--inner">
         <a class="header__logo" href="index.html">
           <picture>
-              <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
-              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
             <img class="header__logo-image" src="img/logo-mobile.svg" width="191" height="38"
-            alt="Интернет-магазин фитнес еды для котиков «Кэт энерджи»">
+              alt="Интернет-магазин фитнес еды для котиков «Кэт энерджи»">
           </picture>
         </a>
         <nav class="nav nav--closed nav--nojs">
-          <button class="nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <button class="nav__toggle nav__toggle--inner" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="nav__list">
             <li class="nav__item">
               <a class="nav__link" href="index.html">Главная</a></li>
