@@ -32,6 +32,13 @@ input[type="range"] {
 
 input[type="range"]::-webkit-slider-runnable-track {
   width: 100%;
+  background-color: @bg-light;
+  cursor: pointer;
+  animate: 0.2s;
+}
+
+input[type="range"]::-ms-track {
+  width: 100%;
   background: @bg-light;
   cursor: pointer;
   animate: 0.2s;
@@ -60,4 +67,87 @@ input[type="range"]::-moz-range-thumb {
   border-radius: 3px;
   cursor: pointer;
   appearance: none;
+}
+
+input[type="range"]::-ms-thumb {
+  width: 35px;
+  height: 6px;
+  background: @bg-button;
+  border-radius: 3px;
+  cursor: pointer;
+  appearance: none;
+}
+
+input[type="range"]::-ms-fill-lower {
+  background-color: @bg-light;
+}
+
+input[type="range"]::-ms-fill-upper {
+  background-color: @bg-light;
+}
+
+@media (min-width: @tablet-width) {
+  .toggles {
+    width: 570px;
+    padding-left: 0;
+  }
+
+  .toggle__label {
+    padding-bottom: 5px;
+    font-size: 20px;
+    line-height: 20px;
+    border-bottom: 1px dotted #bebebe;
+  }
+
+  input[type="range"] {
+    width: 428px;
+    height: 6px;
+    margin-top: -4px;
+    padding: 0;
+  }
+
+  input[type="range"]::-webkit-slider-runnable-track {
+    height: 6px;
+    background-color: #dcdcdc;
+  }
+
+  input[type="range"]::-moz-range-track {
+    height: 6px;
+    background-color: #dcdcdc;
+  }
+
+  input[type="range"]::-ms-track {
+    height: 6px;
+    background-color: #dcdcdc;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    box-sizing: border-box;
+    width: 34px;
+    height: 34px;
+    margin-top: -14px;
+    background-color: @bg-light;
+    border: 1px solid #dedede;
+    border-radius: 50%;
+  }
+
+  input[type="range"]::-moz-range-thumb {
+    box-sizing: border-box;
+    width: 34px;
+    height: 34px;
+    margin-top: -14px;
+    background-color: @bg-light;
+    border: 1px solid #dedede;
+    border-radius: 50%;
+  }
+
+  input[type="range"]::-ms-thumb {
+    box-sizing: border-box;
+    width: 34px;
+    height: 34px;
+    margin-top: -14px;
+    background-color: @bg-light;
+    border: 1px solid #dedede;
+    border-radius: 50%;
+  }
 }
