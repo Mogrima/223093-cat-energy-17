@@ -1,10 +1,14 @@
 .add {
-  width: @mobile-box;
+  width: 282px;
   margin: 0 auto;
 }
 
+.add__wrapper {
+  margin-bottom: 33px;
+}
+
 .add__title {
-  margin: 0 0 31px 0;
+  margin: 0 0 32px 0;
   font-weight: normal;
   .title(@title: @fz-subtitle, @lh: @lh-value);
   color: @title-dark;
@@ -18,7 +22,8 @@
 .add__table-title {
   flex-grow: 1;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
+  padding: 0;
   .ff-reg();
   .link(@lh: @lh-small);
   color: @title-table;
@@ -34,7 +39,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 14px 0 18px 0;
+  padding: 13px 0 16px 0;
   border-bottom: 1px solid @border-table;
 
   &:first-child {
@@ -43,7 +48,7 @@
 }
 
 .add__gift {
-  margin-top: 40px;
+  margin-top: 37px;
 }
 
 @media (min-width: @tablet-width) {
