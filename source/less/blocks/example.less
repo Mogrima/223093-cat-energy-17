@@ -2,7 +2,7 @@
   box-sizing: border-box;
   width: @modile-width;
   margin: 0 auto;
-  padding-top: 16px;
+  padding-top: 17px;
   background-color: @bg-color;
 }
 
@@ -28,7 +28,6 @@
 .exapmple__photo {
   box-sizing: content-box;
   width: 320px;
-  margin-bottom: 29px;
 }
 
 @media (min-width: @tablet-width) {
@@ -38,19 +37,23 @@
   }
 
   .example__title {
-    margin-left: 2px;
+    margin-left: 0;
     margin-bottom: 64px;
   }
 
   .example__desc {
-    margin-bottom: 55px;
+    margin: 0 0 49px 0;
     padding-right: 16px;
-    padding-left: 2px;
     .text(@fz: 16px, @lh: 24px);
   }
 
   .example__sheets {
     margin-bottom: 78px;
+  }
+
+  .exapmple__photo {
+    width: 690px;
+    height: 517px;
   }
 }
 

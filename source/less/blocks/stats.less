@@ -59,27 +59,56 @@
 @media (min-width: @tablet-width) {
   .stats {
     width: @tablet-box;
+    padding: 0;
   }
 
   .stats tbody {
-    display: flex;
+    margin-left: -4px;
+  }
+
+  .stats__item {
+    &:first-child {
+      margin-right: 37px;
+    }
   }
 
   .stats__item-food {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     margin: 0 0 0 auto;
+    padding-top: 13px;
   }
 
   .stats__value {
+    width: 163px;
+    padding-top: 14px;
+    padding-bottom: 19px;
     .title(@title: 30px, @lh: 37px);
   }
 
   .stats__field {
+    top: 65px;
+    width: auto;
     .text(@fz: 14px, @lh: 14px);
+    background-color: @bg-light;
+
+    &--right {
+      right: 348px;
+    }
+
+    &--left {
+      left: 24px;
+    }
   }
 
   .stats__field-food,
   .stats__value-food {
     .title(@title: 20px, @lh: 20px);
+  }
+
+  .stats__field-food {
+    margin-bottom: 9px;
   }
 }
 
