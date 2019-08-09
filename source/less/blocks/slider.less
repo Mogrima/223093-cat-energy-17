@@ -1,4 +1,5 @@
 .slider {
+  width: 690px;
   background-color: @bg-color;
 }
 
@@ -21,11 +22,19 @@
 }
 
 @media (min-width: @desktop-width) {
+  .slider {
+    width: 690px;
+  }
+
   .slider__list {
     margin-top: 0;
   }
 
   .slider__toggles {
     padding-bottom: 0;
+  }
+
+  .slider__photo {
+    margin: -261px 0 38px 0;
   }
 }

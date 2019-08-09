@@ -118,10 +118,43 @@
   }
 
   .stats tbody {
+    justify-content: flex-start;
     flex-wrap: wrap;
+    width: 380px;
+  }
+
+  .stats__item {
+    &:first-child {
+      margin-right: 38px;
+    }
   }
 
   .stats__item-food {
+    flex-direction: row;
+    width: 100%;
     margin-left: 0;
+    padding: 58px 0 0 2px;
+  }
+
+  .stats__field-food {
+    margin: 0 64px 0 0;
+  }
+
+  .stats__value {
+    width: 162px;
+    padding-left: 17px;
+  }
+
+  .stats__field {
+    padding-left: 9px;
+    background-color: @bg-color;
+
+    &--right {
+      right: 20px;
+    }
+
+    &--left {
+      left: 25px;
+    }
   }
 }

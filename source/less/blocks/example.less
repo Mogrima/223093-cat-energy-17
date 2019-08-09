@@ -1,6 +1,6 @@
 .example {
   box-sizing: border-box;
-  width: @modile-width;
+  width: 1300px;
   margin: 0 auto;
   padding-top: 17px;
   background-color: @bg-color;
@@ -60,21 +60,23 @@
 @media (min-width: @desktop-width) {
   .example {
     width: @desktop-box;
+    padding-top: 16px;
   }
 
   .example__title {
-    margin-left: 0;
+    margin: 0 0 74px 0;
   }
 
   .example__wrapper {
     display: flex;
-    padding: 82px 0 71px 0;
+    margin-bottom: 0;
+    padding: 72px 0 71px 0;
     background-color: @bg-color;
   }
 
   .example__item {
+    flex-shrink: 0;
     width: 570px;
-    margin-right: 80px;
 
     &:last-child {
       margin-right: 0;
@@ -82,7 +84,8 @@
   }
 
   .example__desc {
-    padding-right: 135px;
+    margin-bottom: 64px;
+    padding-right: 131px;
   }
 
   .example__sheets {
