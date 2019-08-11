@@ -232,19 +232,21 @@
   .form__wrapper {
     display: flex;
     flex-wrap: wrap;
+    box-sizing: border-box;
     width: @tablet-box;
     padding: 0 40px;
   }
 
   .form__main-title {
     margin-left: 30px;
+    padding-top: 53px;
   }
 
   .form__desc {
     width: 325px;
-    margin-left: 30px;
-    margin-bottom: 65px;
-    padding-top: 56px;
+    margin-left: 70px;
+    margin-bottom: 66px;
+    padding-top: 55px;
     .text(@fz: 20px, @lh: 30px);
   }
 
@@ -252,12 +254,21 @@
     width: 100%;
     margin-bottom: 65px;
 
+    &--border {
+      margin-bottom: 48px;
+    }
+
+    &--comments {
+      margin-bottom: 63px;
+    }
+
     &--last {
-      margin-bottom: 15px;
+      margin-bottom: 22px;
     }
   }
 
   .form__title {
+    margin-bottom: 76px;
     .title(@lh: 36px);
   }
 
@@ -272,7 +283,13 @@
   }
 
   .form__input {
-    padding: 16px 0 16px 20px;
+    padding: 16px 0 11px 20px;
+  }
+
+  .form__textarea {
+    width: 631px;
+    height: 174px;
+    padding: 10px 0 0 18px;
   }
 
   .form__button {
@@ -282,20 +299,57 @@
   }
 
   .form__sign {
-    margin-left: 60px;
-    padding-top: 15px;
+    margin-left: 69px;
+    padding-top: 16px;
     font-size: 16px;
+  }
+
+  // for text input
+  .form__label-input {
+    margin-bottom: 20px;
+
+    .form__input {
+      width: 530px;
+    }
+  }
+
+  .form__label-name {
+    // margin-top: -7px;
+  }
+
+  .form__item--owner {
+    // width: 635px;
+    // margin-bottom: 28px;
+
+    .form__label-name {
+      margin-right: 20px;
+    }
   }
 
   // for radio form
   .form__item-radio {
     box-sizing: border-box;
-    padding: 25px 0 25px 30px;
+    margin-bottom: 74px;
+    padding: 23px 0 25px 29px;
     border: 1px solid @border-input;
   }
 
   .form__label-radio {
-    margin-bottom: 13px;
+    margin-bottom: 12px;
+  }
+
+  .form__radio-indicator {
+    width: 38px;
+    height: 39px;
+    margin-right: 18px;
+
+    &::before {
+      top: 12px;
+      left: 10px;
+
+      width: 18px;
+      height: 18px;
+    }
   }
 
   // for checkbox form
@@ -305,11 +359,32 @@
   }
 
   .form__label-check {
-    width: 50%;
+    box-sizing: border-box;
+    width: 284px;
     margin-bottom: 32px;
 
     &:last-child {
       margin-bottom: 32px;
+    }
+
+    &:nth-child(2n) {
+      margin-left: 60px;
+    }
+  }
+
+  .form__title--check {
+    margin-bottom: 57px;
+  }
+
+  .form__checkbox-indicator {
+    margin-right: 18px;
+
+    width: 40px;
+    height: 40px;
+
+    &::before {
+      top: 12px;
+      left: 10px;
     }
   }
 }
