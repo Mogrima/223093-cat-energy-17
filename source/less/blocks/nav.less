@@ -116,8 +116,9 @@
 
 @media (min-width: @tablet-width) {
   .nav {
-    width: 438px;
+    width: 440px;
     margin: 0;
+    margin-left: auto;
   }
 
   .nav__list {
@@ -127,6 +128,8 @@
   }
 
   .nav__item {
+    box-sizing: border-box;
+    max-width: 100%;
     margin-right: 34px;
     padding-top: 21px;
     border: none;
@@ -167,7 +170,7 @@
 
 @media (min-width: @desktop-width) {
   .nav {
-    width: 478px;
+    width: 480px;
   }
 
   .nav__item {
