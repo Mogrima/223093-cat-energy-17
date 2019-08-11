@@ -6,12 +6,12 @@
 
 .form__wrapper {
   width: @mobile-box;
-  margin: 0 auto;
+  margin: 0 auto 31px auto;
 }
 
 .form__desc {
-  margin: 0 0 40px 20px;
-  padding-top: 35px;
+  margin: 0 0 38px 20px;
+  padding: 26px 30px 0 0;
   line-height: @lh-text;
   color: @title-dark;
   text-transform: uppercase;
@@ -19,6 +19,7 @@
 
 .form__main-title {
   margin-left: 20px;
+  padding-top: 16px;
 }
 
 .form__item {
@@ -29,13 +30,18 @@
   border: none;
 
   &--border {
+    margin-bottom: 0;
     padding-bottom: 23px;
     border-bottom: 1px solid @border-product;
+  }
+
+  &--last {
+    margin-bottom: 35px;
   }
 }
 
 .form__title {
-  margin-bottom: 32px;
+  margin-bottom: 34px;
   font-size: @fz-subtitle;
   line-height: @lh-value;
   color: @title-dark;
@@ -59,19 +65,26 @@
 
 .form__input {
   flex-grow: 1;
+  box-sizing: border-box;
   width: 100%;
-  padding: 13px 0 13px 15px;
+  padding: 14px 0 11px 14px;
   border: 1px solid @border-input;
+
+  &--num {
+    padding-left: 17px;
+  }
 }
 
 .form__textarea {
-  width: 100%;
-  padding: 15px 0 0 15px;
+  box-sizing: border-box;
+  width: 280px;
+  height: 150px;
+  padding: 12px 0 0 14px;
   border: 1px solid @border-input;
 }
 
 .form__button {
-  margin-bottom: 22px;
+  margin-bottom: 21px;
 }
 
 .form__sign {
@@ -96,18 +109,35 @@
 
 .form__label-name {
   flex-shrink: 0;
-  margin-right: 15px;
+  margin-right: 14px;
+}
+
+.form__item--owner {
+  margin-bottom: 28px;
+
+  .form__label-name {
+    margin-right: 11px;
+  }
+}
+
+.form__item--comments {
+  margin-bottom: 26px;
+}
+
+.form__title--comments {
+  margin-bottom: 35px;
 }
 
 // for radio form
 .form__item-radio {
-  padding-top: 20px;
+  margin-bottom: 28px;
+  padding: 20px 0 19px 0;
 }
 
 .form__label-radio {
   display: flex;
   align-items: center;
-  margin-bottom: 13px;
+  margin-bottom: 12px;
 
   &:last-child {
     margin-bottom: 0;
@@ -119,10 +149,14 @@
   display: block;
 }
 
+.form__title--check {
+  margin-bottom: 35px;
+}
+
 .form__label-check {
   display: flex;
   align-items: center;
-  margin-bottom: 26px;
+  margin-bottom: 12px;
 
   &:last-child {
     margin-bottom: 0;
@@ -131,9 +165,9 @@
 
 // custom radio beats and checkboxes
 .form__radio-indicator {
-  width: 30px;
-  height: 30px;
-  margin-right: 17px;
+  width: 28px;
+  height: 29px;
+  margin-right: 15px;
 
   background-color: @bg-light;
   border-radius: 50%;
@@ -143,8 +177,8 @@
     display: none;
     content: "";
     position: absolute;
-    top: 9px;
-    left: 8px;
+    top: 10px;
+    left: 9px;
 
     width: 12px;
     height: 12px;
@@ -155,8 +189,9 @@
 }
 
 .form__checkbox-indicator {
-  margin-right: 16px;
+  margin-right: 15px;
 
+  box-sizing: border-box;
   width: 30px;
   height: 30px;
 
@@ -167,8 +202,8 @@
     display: none;
     content: "";
     position: absolute;
-    top: 6px;
-    left: 4px;
+    top: 7px;
+    left: 5px;
 
     width: 21px;
     height: 16px;
