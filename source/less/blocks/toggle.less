@@ -19,7 +19,7 @@
   transform: scale(0);
 }
 
-input[type="range"] {
+.toggles__range {
   box-sizing: border-box;
   width: 84px;
   height: 14px;
@@ -30,28 +30,28 @@ input[type="range"] {
   appearance: none;
 }
 
-input[type="range"]::-webkit-slider-runnable-track {
+.toggles__range::-webkit-slider-runnable-track {
   width: 100%;
   background-color: @bg-light;
   cursor: pointer;
   animate: 0.2s;
 }
 
-input[type="range"]::-ms-track {
+.toggles__range::-ms-track {
   width: 100%;
   background: @bg-light;
   cursor: pointer;
   animate: 0.2s;
 }
 
-input[type="range"]::-moz-range-track {
+.toggles__range::-moz-range-track {
   width: 100%;
   background: @bg-light;
   cursor: pointer;
   animate: 0.2s;
 }
 
-input[type="range"]::-webkit-slider-thumb {
+.toggles__range::-webkit-slider-thumb {
   width: 35px;
   height: 6px;
   background: @bg-button;
@@ -60,7 +60,7 @@ input[type="range"]::-webkit-slider-thumb {
   appearance: none;
 }
 
-input[type="range"]::-moz-range-thumb {
+.toggles__range::-moz-range-thumb {
   width: 35px;
   height: 6px;
   background: @bg-button;
@@ -69,7 +69,7 @@ input[type="range"]::-moz-range-thumb {
   appearance: none;
 }
 
-input[type="range"]::-ms-thumb {
+.toggles__range::-ms-thumb {
   width: 35px;
   height: 6px;
   background: @bg-button;
@@ -78,11 +78,11 @@ input[type="range"]::-ms-thumb {
   appearance: none;
 }
 
-input[type="range"]::-ms-fill-lower {
+.toggles__range::-ms-fill-lower {
   background-color: @bg-light;
 }
 
-input[type="range"]::-ms-fill-upper {
+.toggles__range::-ms-fill-upper {
   background-color: @bg-light;
 }
 
@@ -99,29 +99,29 @@ input[type="range"]::-ms-fill-upper {
     border-bottom: 1px dotted #bebebe;
   }
 
-  input[type="range"] {
+  .toggles__range {
     width: 428px;
     height: 6px;
     margin-top: -4px;
     padding: 0;
   }
 
-  input[type="range"]::-webkit-slider-runnable-track {
+  .toggles__range::-webkit-slider-runnable-track {
     height: 6px;
     background-color: #dcdcdc;
   }
 
-  input[type="range"]::-moz-range-track {
+  .toggles__range::-moz-range-track {
     height: 6px;
     background-color: #dcdcdc;
   }
 
-  input[type="range"]::-ms-track {
+  .toggles__range::-ms-track {
     height: 6px;
     background-color: #dcdcdc;
   }
 
-  input[type="range"]::-webkit-slider-thumb {
+  .toggles__range::-webkit-slider-thumb {
     box-sizing: border-box;
     width: 34px;
     height: 34px;
@@ -131,7 +131,7 @@ input[type="range"]::-ms-fill-upper {
     border-radius: 50%;
   }
 
-  input[type="range"]::-moz-range-thumb {
+  .toggles__range::-moz-range-thumb {
     box-sizing: border-box;
     width: 34px;
     height: 34px;
@@ -141,7 +141,7 @@ input[type="range"]::-ms-fill-upper {
     border-radius: 50%;
   }
 
-  input[type="range"]::-ms-thumb {
+  .toggles__range::-ms-thumb {
     box-sizing: border-box;
     width: 34px;
     height: 34px;
