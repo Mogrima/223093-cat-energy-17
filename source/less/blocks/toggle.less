@@ -55,6 +55,16 @@
     font-size: 20px;
     line-height: 20px;
     border-bottom: 1px dotted #bebebe;
+
+    &:hover {
+      border-bottom: 1px solid #989898;
+      cursor: pointer;
+    }
+
+    &:active,
+    &:focus {
+      border-bottom-color: transparent;
+    }
   }
 
   .toggles__range {
@@ -66,6 +76,7 @@
   }
 
   .toggles__range-thumb {
+    z-index: 10;
     top: -1px;
     left: 198px;
     box-sizing: border-box;
@@ -85,6 +96,20 @@
       height: 8px;
       background-color: @bg-button;
       border-radius: 50%;
+    }
+
+    &:hover {
+      box-shadow: 0 3px 5px 0 fade(@stroke-color, 25%);
+    }
+
+    &:active,
+    &:focus {
+      border: 2px solid #7abf4f;
+
+      &::before {
+        top: 11px;
+        left: 11px;
+      }
     }
   }
 }
