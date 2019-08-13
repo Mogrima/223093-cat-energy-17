@@ -63,6 +63,20 @@
   text-transform: uppercase;
 }
 
+.form__input,
+.form__textarea {
+  &:hover {
+    border-color: @border-table;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    border-color: @text-dark;
+    box-shadow: inset 0 0 0 1px @text-dark;
+  }
+}
+
 .form__input {
   flex-grow: 1;
   box-sizing: border-box;
@@ -72,6 +86,25 @@
 
   &--num {
     padding-left: 17px;
+  }
+}
+
+.form__input:active + .form__input-icon,
+.form__input:focus + .form__input-icon {
+  fill: @bg-button;
+}
+
+.form__input-icon {
+  position: absolute;
+
+  &--mail {
+    top: 16px;
+    right: 16px;
+  }
+
+  &--phone {
+    right: 13px;
+    top: 13px;
   }
 }
 
@@ -97,6 +130,7 @@
 
 // for text input
 .form__label-input {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -286,6 +320,18 @@
     padding: 16px 0 11px 20px;
   }
 
+  .form__input-icon {
+    &--mail {
+      top: 20px;
+      right: 21px;
+    }
+
+    &--phone {
+      right: 18px;
+      top: 17px;
+    }
+  }
+
   .form__textarea {
     width: 631px;
     height: 174px;
@@ -388,23 +434,59 @@
     width: @desktop-width;
   }
 
+
+  .form__main-title {
+    margin-left: 40px;
+    padding-top: 68px;
+  }
+
   .form__desc {
     margin-left: 40px;
   }
 
   .form__wrapper {
     width: @desktop-box;
+    margin-bottom: 12px;
     padding: 0;
   }
 
   .form__item {
     &--border {
       width: 570px;
+      margin-bottom: 0;
+      border: none;
+    }
+
+    &--owner {
+      margin-top: 46px;
+      margin-bottom: 67px;
+    }
+
+    &--comments {
+      margin-bottom: 65px;
+    }
+
+    &--last {
+      margin-bottom: 29px;
     }
   }
 
-  .form__main-title {
-    margin-left: 40px;
+  .form__input-icon {
+    &--mail {
+      top: 20px;
+      right: 20px;
+    }
+
+    &--phone {
+      right: 19px;
+      top: 17px;
+    }
+  }
+
+  .form__textarea {
+    width: 1220px;
+    height: 174px;
+    padding: 10px 0 0 18px;
   }
 
   .form__button {
@@ -412,7 +494,7 @@
   }
 
   .form__sign {
-    margin-left: 80px;
+    margin-left: 85px;
   }
 
   // for text input
@@ -423,17 +505,24 @@
 
   .form__owner-wrapper .form__label-input {
     width: 570px;
-    margin-bottom: 0;
     margin-right: 80px;
+    margin-bottom: 0;
 
     &:nth-child(2n) {
       margin-right: 0;
     }
   }
 
+  .form__label-input {
+    .form__input {
+      width: auto;
+    }
+  }
+
   // for checkbox form
   .form__item-radio {
     margin-left: 80px;
+    margin-bottom: 0;
   }
 
   .form__label-check {
@@ -442,6 +531,10 @@
 
     &:last-child {
       margin-right: 0;
+    }
+
+    &:nth-child(2n) {
+      margin-left: 0;
     }
   }
 }
