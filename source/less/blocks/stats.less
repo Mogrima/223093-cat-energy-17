@@ -1,23 +1,31 @@
 .stats {
-  padding: 0 20px;
-}
-
-.stats tbody {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  margin: 0;
+  padding: 0 20px;
+  list-style: none;
+  border-spacing: 0;
+}
+
+.stats__item {
+  box-sizing: border-box;
+  margin-right: 32px;
+
+  &:nth-child(2n) {
+    margin-right: 0;
+  }
 }
 
 .stats__item-food {
-  margin: 0 auto;
-  margin-top: 31px;
+  margin: 35px auto 0 auto;
 }
 
 .stats__value {
+  display: block;
   box-sizing: border-box;
-  width: 123px;
-  padding: 13px 16px 16px 12px;
+  width: 124px;
+  padding: 13px 13px 16px 12px;
   font-size: @fz-value;
   line-height: @lh-value;
   color: @title-dark;
@@ -30,7 +38,7 @@
 
 .stats__field {
   position: absolute;
-  top: 48px;
+  top: 47px;
   box-sizing: border-box;
   width: 87px;
   padding: 0 10px;
@@ -40,11 +48,11 @@
   background-color: @bg-color;
 
   &--right {
-    right: 17px;
+    right: 38px;
   }
 
   &--left {
-    left: 15px;
+    left: 38px;
   }
 }
 
