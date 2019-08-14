@@ -34,7 +34,12 @@
 }
 
 .add__table-value {
+  width: 140px;
   padding: 0;
+
+  &--small {
+    text-align: right;
+  }
 }
 
 .add__table-item {
@@ -49,9 +54,14 @@
   }
 }
 
+.add__table-order {
+  width: 100%;
+}
+
 .add__table-button {
+  width: 100%;
   margin-top: 16px;
-  padding-left: 5px;
+  padding-left: 13px;
 }
 
 .add__gift {
@@ -106,15 +116,15 @@
     margin: 0 0 0 53px;
     padding-top: 5px;
     .link();
+    text-align: right;
 
     &--small {
+      box-sizing: border-box;
+      width: 132px;
+      margin: 0;
       margin-bottom: 0;
       padding-right: 37px;
     }
-  }
-
-  .add__table-order {
-    width: 100%;
   }
 
   .add__table-button {
@@ -179,6 +189,7 @@
   .add__table-value {
     width: 245px;
     margin: 0;
+    text-align: left;
 
     &--small {
       width: 47px;

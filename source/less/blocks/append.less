@@ -1,5 +1,5 @@
 .append {
-  padding: 79px 0 24px 0;
+  padding: 79px 10px 24px 10px;
   text-align: center;
   border: 1px solid @border-product;
   border-top: none;
@@ -18,7 +18,7 @@
     content: "";
     position: absolute;
     top: -53px;
-    left: 158px;
+    left: 148px;
     width: 2px;
     height: 30px;
     background-color: #d3d3d3;
@@ -39,11 +39,13 @@
 .append__to-all {
   margin: 0 auto;
   padding-left: 3px;
+  padding-right: 3px;
 }
 
 @media (min-width: @tablet-width) {
   .append {
     width: 324px;
+    padding: 0;
     padding-top: 164px;
     border-top: 1px solid @border-input;
     border-bottom: 1px solid @border-input;
@@ -70,6 +72,7 @@
   }
 
   .append__to-all {
+    width: 243px;
     margin-bottom: 0;
   }
 }
@@ -92,5 +95,9 @@
   .append__text {
     margin-bottom: 84px;
     padding: 0 39px;
+  }
+
+  .append__to-all {
+    width: 164px;
   }
 }

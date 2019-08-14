@@ -6,16 +6,17 @@
 .social__list {
   display: flex;
   align-items: center;
-  width: 125px;
+  flex-wrap: wrap;
+  width: 135px;
   margin: 0 auto;
-  padding: 20px 0 21px 0;
+  padding: 22px 0 19px 0;
   list-style: none;
 }
 
 .social__item {
-  margin-right: 37px;
+  margin-right: 38px;
 
-  &:last-child {
+  &:nth-child(3n) {
     margin-right: 0;
   }
 }
