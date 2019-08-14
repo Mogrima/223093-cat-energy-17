@@ -7,6 +7,7 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=41194236-2233-459b-aeb2-f43bf3e3dc48&lang=ru_RU"></script>
   </head>
   <body>
       <div style="display:none">
@@ -47,7 +48,7 @@
           <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
           <img class="promo__image" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" width="280" height="271" alt="Функциональное питание для котов «Кэт энерджи»">
         </picture>
-        <a href="/catalog.html" class="button button--less promo__button">Подобрать программу</a>
+        <a class="button button--less promo__button" href="/form.html">Подобрать программу</a>
       </div>
       <section class="catalog">
         <h2 class="visually-hidden">Каталог программ</h2>
@@ -87,20 +88,20 @@
               Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов
               в
               день. </p>
-            <table class="example__sheets stats">
-              <tr class="stats__item">
-                <td class="stats__value">5 кг</td>
-                <td class="stats__field">снижение веса</td>
-              </tr>
-              <tr class="stats__item">
-                <td class="stats__value">60 дней</td>
-                <td class="stats__field">затрачено времени</td>
-              </tr>
-              <tr class="stats__item stats__item-food">
-                <td class="stats__field-food">Затраты на питание: </td>
-                <td class="stats__value-food">15 000 руб.</td>
-              </tr>
-            </table>
+            <ul class="example__sheets stats">
+              <li class="stats__item">
+                <span class="stats__value">5 кг</span>
+                <span class="stats__field stats__field--left">снижение веса</span>
+              </li>
+              <li class="stats__item">
+                <span class="stats__value">60 дней</span>
+                <span class="stats__field stats__field--right">затрачено времени</span>
+              </li>
+              <li class="stats__item stats__item-food">
+                <span class="stats__field-food">Затраты на питание: </span>
+                <span class="stats__value-food">15 000 руб.</span>
+              </li>
+            </ul>
           </div>
           <div class="slider example__item">
             <div class="slider__list">
@@ -111,45 +112,49 @@
                   <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
                   <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x,img/before-desktop@2x.png 2x">
                   <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-                <img src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="320" height="240" alt="Было">
+                <img class="slider__photo" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="320" height="240" alt="Было">
               </picture>
               </div>
-              <!-- <div class="slider__item slider__item--after">
+              <div class="slider__item slider__item--after">
                 <picture>
                   <source type="image/webp" media="(min-width: 1300px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp 1x,img/after-tablet@2x.webp 2x">
                   <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
                   <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
                   <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
-                  <img src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" width="320" height="240" alt="Было">
+                  <img class="slider__photo" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" width="320" height="240" alt="Было">
                 </picture>
-                <img src="img/after-mobile@1x.png" width="320" height="240" alt="Стало">
-              </div> -->
+              </div>
             </div>
             <div class="slider__toggles toggles">
               <input class="toggles__btn toggles__btn--before" id="before" type="radio" name="toggle" value="before" checked>
               <input class="toggles__btn toggles__btn--after" id="after" type="radio" name="toggle" value="after">
-              <label class="toggle__label" for="before">Было</label>
-              <input class="toggles__range" type="range" name="range">
-              <label class="toggle__label" for="after">Стало</label>
+              <label class="toggles__label" for="before">Было</label>
+              <div class="toggles__range">
+                <div class="toggles__range-thumb"></div>
+              </div>
+              <label class="toggles__label" for="after">Стало</label>
             </div>
           </div>
         </div>
       </section>
       <section class="map">
         <div class="map__header">
-          <h3 class="map__title">Приглашаем к сотрудничеству дилеров!</h3>
+          <h3 class="map__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h3>
           <address class="map__text">ул. Большая Конюшенная, д. 19/8 <span class="map__city">Санкт-Петербург</span></address>
         </div>
-        <picture>
-          <source type="image/webp" media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x,img/bg-map-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
-          <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
-          <img class="map__image" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="362"
-          alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
-      </picture>
+        <div class="map__block map__block--no-js">
+          <picture>
+            <source type="image/webp" media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x,img/bg-map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
+            <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+            <img class="map__image" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="362"
+            alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+        </picture>
+        </div>
+        <div class="map__image" id="map"></div>
       </section>
     </main>
     <footer class="footer">
@@ -191,6 +196,63 @@
         </a>
       </div>
     </footer>
+    <script src="js/picturefill.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      ymaps.ready(init);
+      var myMap;
+
+      function init() {
+        if (document.body.clientWidth < 768) {
+          myMap = new ymaps.Map("map", {
+            center: [59.938631, 30.323055],
+            zoom: 17
+          });
+
+          myMap.behaviors.disable('scrollZoom');
+
+          var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/map-pin.png',
+            iconImageSize: [62, 53],
+            iconImageOffset: [-36, -53]
+          });
+
+          myMap.geoObjects.add(myPlacemark);
+        } else if (document.body.clientWidth >= 768 && document.body.clientWidth < 1300) {
+          myMap = new ymaps.Map("map", {
+            center: [59.938631, 30.323055],
+            zoom: 17
+          });
+
+          myMap.behaviors.disable('scrollZoom');
+
+          var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/map-pin.png',
+            iconImageSize: [124, 106],
+            iconImageOffset: [-36, -53]
+          });
+
+          myMap.geoObjects.add(myPlacemark);
+        } else if (document.body.clientWidth >= 1300) {
+          myMap = new ymaps.Map("map", {
+            center: [59.938963, 30.319293],
+            zoom: 17
+          });
+
+          myMap.behaviors.disable('scrollZoom');
+
+          var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/map-pin.png',
+            iconImageSize: [124, 106],
+            iconImageOffset: [-72, -106]
+          });
+
+          myMap.geoObjects.add(myPlacemark);
+        }
+      }
+    </script>
   </body>
 </html>

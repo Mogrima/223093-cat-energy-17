@@ -6,7 +6,7 @@
 
 .nav__toggle {
   position: absolute;
-  top: -39px;
+  top: -37px;
   right: 0;
   z-index: 2;
   display: block;
@@ -116,8 +116,9 @@
 
 @media (min-width: @tablet-width) {
   .nav {
-    width: 438px;
+    width: 440px;
     margin: 0;
+    margin-left: auto;
   }
 
   .nav__list {
@@ -127,6 +128,8 @@
   }
 
   .nav__item {
+    box-sizing: border-box;
+    max-width: 100%;
     margin-right: 34px;
     padding-top: 21px;
     border: none;
@@ -135,7 +138,11 @@
       border: none;
     }
 
-    &:last-child {
+    &:nth-child(2) {
+      margin-right: 35px;
+    }
+
+    &:nth-child(3n) {
       margin-right: 0;
     }
 
@@ -146,7 +153,7 @@
         content: "";
         position: absolute;
         right: 0;
-        bottom: 12px;
+        bottom: 10px;
         left: 0;
         height: 3px;
         background: @bg-button;
@@ -155,6 +162,7 @@
   }
 
   .nav__link {
+    max-width: 100%;
     font-weight: normal;
     font-size: @fz-menuDesktop;
   }
@@ -166,11 +174,15 @@
 
 @media (min-width: @desktop-width) {
   .nav {
-    width: 478px;
+    width: 480px;
   }
 
   .nav__item {
     padding-top: 19px;
+
+    &:nth-child(2) {
+      margin-right: 34px;
+    }
   }
 
   .nav__link {

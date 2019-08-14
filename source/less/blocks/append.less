@@ -1,22 +1,24 @@
 .append {
-  padding: 25px 0;
+  padding: 79px 10px 24px 10px;
   text-align: center;
   border: 1px solid @border-product;
   border-top: none;
 }
 
-.append__more {
+.append__title {
   position: relative;
-  margin-bottom: 35px;
-  border: none;
-  background-color: transparent;
+  margin: 0 0 8px 0;
+  padding-left: 4px;
+  .link();
+  color: @title-dark;
+  text-transform: uppercase;
 
   &::before,
   &::after {
     content: "";
     position: absolute;
-    top: -15px;
-    left: 4px;
+    top: -53px;
+    left: 148px;
     width: 2px;
     height: 30px;
     background-color: #d3d3d3;
@@ -25,14 +27,6 @@
   &::after {
     transform: rotate(90deg);
   }
-}
-
-.append__title {
-  margin: 0 0 8px 0;
-  padding-left: 4px;
-  .link();
-  color: @title-dark;
-  text-transform: uppercase;
 }
 
 .append__text {
@@ -45,39 +39,40 @@
 .append__to-all {
   margin: 0 auto;
   padding-left: 3px;
+  padding-right: 3px;
 }
 
 @media (min-width: @tablet-width) {
   .append {
     width: 324px;
-    padding-top: 55px;
+    padding: 0;
+    padding-top: 164px;
     border-top: 1px solid @border-input;
     border-bottom: 1px solid @border-input;
   }
 
-  .append__more {
-    margin-bottom: 91px;
+  .append__title {
+    margin-bottom: 25px;
+    padding: 0 90px 0 95px;
+    font-size: @fz-nav;
 
     &::before,
     &::after {
-      left: 6px;
+      top: -109px;
+      left: 163px;
       height: 60px;
     }
   }
 
-  .append__title {
-    margin-bottom: 29px;
-    padding: 0 90px 0 95px;
-    font-size: @fz-nav;
-  }
-
   .append__text {
-    margin-bottom: 87px;
+    margin-bottom: 84px;
     padding: 0 50px 0 54px;
     font-size: @fz-link;
+    line-height: 20px;
   }
 
   .append__to-all {
+    width: 243px;
     margin-bottom: 0;
   }
 }
@@ -85,14 +80,24 @@
 @media (min-width: @desktop-width) {
   .append {
     width: 245px;
+    padding-top: 160px;
   }
 
   .append__title {
     padding: 0 50px;
+
+    &::before,
+    &::after {
+      left: 124px;
+    }
   }
 
   .append__text {
     margin-bottom: 84px;
     padding: 0 39px;
+  }
+
+  .append__to-all {
+    width: 164px;
   }
 }

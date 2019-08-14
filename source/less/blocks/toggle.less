@@ -1,5 +1,125 @@
-.toggle__label {
+.toggles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  width: 201px;
+  margin: 0 auto;
+  padding-left: 4px;
+}
+
+.toggles__label {
+  position: relative;
   .link();
   color: @title-dark;
   text-transform: uppercase;
+}
+
+.toggles__btn {
+  position: absolute;
+  transform: scale(0);
+}
+
+.toggles__range {
+  position: relative;
+  box-sizing: border-box;
+  width: 84px;
+  height: 14px;
+  margin: 0;
+  padding: 0 6px;
+  background-color: @bg-light;
+  border: 1px solid @border-table;
+  border-radius: 6px;
+  appearance: none;
+}
+
+.toggles__range-thumb {
+  position: absolute;
+  top: 3px;
+  width: 35px;
+  height: 6px;
+  background: @bg-button;
+  border-radius: 3px;
+  cursor: pointer;
+  appearance: none;
+}
+
+@media (min-width: @tablet-width) {
+  .toggles {
+    width: 570px;
+    padding-left: 0;
+  }
+
+  .toggles__label {
+    padding-bottom: 5px;
+    font-size: 20px;
+    line-height: 20px;
+    border-bottom: 1px dotted #bebebe;
+
+    &:hover {
+      border-bottom: 1px solid #989898;
+      cursor: pointer;
+    }
+
+    &:active,
+    &:focus {
+      border-bottom-color: transparent;
+    }
+  }
+
+  .toggles__range {
+    width: 428px;
+    height: 6px;
+    margin-top: -4px;
+    padding: 0;
+    background-color: #dcdcdc;
+  }
+
+  .toggles__range-thumb {
+    z-index: 10;
+    top: -1px;
+    left: 198px;
+    box-sizing: border-box;
+    width: 34px;
+    height: 34px;
+    margin-top: -14px;
+    background-color: @bg-light;
+    border: 1px solid #dedede;
+    border-radius: 50%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      width: 8px;
+      height: 8px;
+      background-color: @bg-button;
+      border-radius: 50%;
+    }
+
+    &:hover {
+      box-shadow: 0 3px 5px 0 fade(@stroke-color, 25%);
+    }
+
+    &:active,
+    &:focus {
+      border: 2px solid #7abf4f;
+
+      &::before {
+        top: 11px;
+        left: 11px;
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .toggles {
+    margin: 0 0 0 79px;
+  }
+
+  .toggles__label {
+    padding-bottom: 6px;
+  }
 }

@@ -1,22 +1,28 @@
 .example {
-  width: @mobile-box;
+  box-sizing: border-box;
+  width: @modile-width;
   margin: 0 auto;
+  padding-top: 17px;
   background-color: @bg-color;
 }
 
+.example__wrapper {
+  padding-bottom: 34px;
+}
+
 .example__title {
-  margin-bottom: 23px;
+  margin: 0 0 24px 20px;
 }
 
 .example__desc {
-  margin: 0 0 24px 0;
+  margin: 0 19px 25px 20px;
   padding-right: 14px;
   .ff-text();
   line-height: @lh-text;
 }
 
 .example__sheets {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 @media (min-width: @tablet-width) {
@@ -25,15 +31,19 @@
     background-color: @bg-light;
   }
 
+  .example__wrapper {
+    padding-bottom: 0;
+    margin-bottom: 33px;
+  }
+
   .example__title {
-    margin-left: 2px;
+    margin-left: 0;
     margin-bottom: 64px;
   }
 
   .example__desc {
-    margin-bottom: 55px;
+    margin: 0 0 52px 0;
     padding-right: 16px;
-    padding-left: 2px;
     .text(@fz: 16px, @lh: 24px);
   }
 
@@ -44,22 +54,24 @@
 
 @media (min-width: @desktop-width) {
   .example {
-    width: @desktop-box;
+    width: 1300px;
+    padding-top: 16px;
   }
 
   .example__title {
-    margin-left: 0;
+    margin: 0 0 74px 40px;
   }
 
   .example__wrapper {
     display: flex;
-    padding: 82px 0 71px 0;
+    margin-bottom: 0;
+    padding: 72px 40px 71px 40px;
     background-color: @bg-color;
   }
 
   .example__item {
+    flex-shrink: 0;
     width: 570px;
-    margin-right: 80px;
 
     &:last-child {
       margin-right: 0;
@@ -67,7 +79,8 @@
   }
 
   .example__desc {
-    padding-right: 135px;
+    margin-bottom: 68px;
+    padding-right: 131px;
   }
 
   .example__sheets {

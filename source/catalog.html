@@ -5,7 +5,9 @@
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=41194236-2233-459b-aeb2-f43bf3e3dc48&lang=ru_RU"></script>
   </head>
   <body>
     <div style="display:none">
@@ -15,14 +17,14 @@
       <div class="header__wrapper">
         <a class="header__logo" href="index.html">
           <picture>
-              <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
-              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
             <img class="header__logo-image" src="img/logo-mobile.svg" width="191" height="38"
-            alt="Интернет-магазин фитнес еды для котиков «Кэт энерджи»">
+              alt="Интернет-магазин фитнес еды для котиков «Кэт энерджи»">
           </picture>
         </a>
         <nav class="nav nav--closed nav--nojs">
-          <button class="nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <button class="nav__toggle nav__toggle--inner" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="nav__list">
             <li class="nav__item">
               <a class="nav__link" href="index.html">Главная</a></li>
@@ -41,18 +43,20 @@
           <li class="product__item">
             <div class="product__wrapper">
               <div class="product__photo">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1300px)" srcset="img/chicken-small-desktop@1x.webp 1x, img/chicken-small-desktop@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/chicken-small-tablet@1x.webp 1x, img/chicken-small-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/chicken-small-mobile@1x.webp 1x, img/chicken-small-mobile@2x.webp 2x">
-                  <source media="(min-width: 1300px)" srcset="img/chicken-small-desktop@1x.png 1x, img/chicken-small-desktop@2x.png 2x">
-                  <source media="(min-width: 768px)" srcset="img/chicken-small-tablet@1x.png 1x, img/chicken-small-tablet@2x.png 2x">
-                  <img class="product__photo-image" src="img/chicken-small-mobile@1x.jpg" srcset="img/chicken-small-mobile@2x.jpg 2x" width="140" height="144"
-                    alt="Cat Energy PRO 500 г Курица">
-                </picture>
+                <a class="product__link-catalog" href="product.html">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1300px)" srcset="img/chicken-small-desktop@1x.webp 1x, img/chicken-small-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/chicken-small-tablet@1x.webp 1x, img/chicken-small-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/chicken-small-mobile@1x.webp 1x, img/chicken-small-mobile@2x.webp 2x">
+                    <source media="(min-width: 1300px)" srcset="img/chicken-small-desktop@1x.png 1x, img/chicken-small-desktop@2x.png 2x">
+                    <source media="(min-width: 768px)" srcset="img/chicken-small-tablet@1x.png 1x, img/chicken-small-tablet@2x.png 2x">
+                    <img class="product__photo-image" src="img/chicken-small-mobile@1x.jpg" srcset="img/chicken-small-mobile@2x.jpg 2x" width="140" height="144"
+                      alt="Cat Energy PRO 500 г Курица">
+                  </picture>
+                </a>
               </div>
               <div class="product__info">
-                <h2 class="product__title">Cat Energy PRO 500 г</h2>
+                <h2 class="product__title"><a class="product__link-catalog" href="product.html">Cat Energy PRO 500 г</a></h2>
                 <table class="product__sheet">
                   <tr class=" product__sheet-item">
                     <td class="product__field">Объем</td>
@@ -69,11 +73,12 @@
                 </table>
               </div>
             </div>
-            <a class="button product__button" href="form.html">Заказать</a>
+            <a class="button product__button" href="order.html">Заказать</a>
           </li>
           <li class="product__item">
             <div class="product__wrapper">
               <div class="product__photo">
+              <a class="product__link-catalog" href="product.html">
                 <picture>
                   <source type="image/webp" media="(min-width: 1300px)" srcset="img/chicken-big-desktop@1x.webp 1x, img/chicken-big-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/chicken-big-tablet@1x.webp 1x, img/chicken-big-tablet@2x.webp 2x">
@@ -83,9 +88,10 @@
                   <img class="product__photo-image product__photo-image--big" src="img/chicken-big-mobile@1x.jpg" srcset="img/chicken-big-mobile@2x.jpg 2x" width="140" height="144"
                     alt="Cat Energy PRO 1000 г Курица">
                 </picture>
+              </a>
               </div>
               <div class="product__info">
-                <h2 class="product__title">Cat Energy PRO 1000 г</h2>
+                <h2 class="product__title"><a class="product__link-catalog" href="product.html">Cat Energy PRO 1000 г</a></h2>
                 <table class="product__sheet">
                   <tr class=" product__sheet-item">
                     <td class="product__field">Объем</td>
@@ -102,23 +108,25 @@
                 </table>
               </div>
             </div>
-            <a class="button product__button" href="form.html">Заказать</a>
+            <a class="button product__button" href="order.html">Заказать</a>
           </li>
           <li class="product__item">
             <div class="product__wrapper">
               <div class="product__photo">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1300px)" srcset="img/fish-small-desktop@1x.webp 1x, img/fish-small-desktop@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/fish-small-tablet@1x.webp 1x, img/fish-small-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/fish-small-mobile@1x.webp 1x, img/fish-small-mobile@2x.webp 2x">
-                  <source media="(min-width: 1300px)" srcset="img/fish-small-desktop@1x.png 1x, img/fish-small-desktop@2x.png 2x">
-                  <source media="(min-width: 768px)" srcset="img/fish-small-tablet@1x.png 1x, img/fish-small-tablet@2x.png 2x">
-                  <img class="product__photo-image" src="img/fish-small-mobile@1x.jpg" srcset="img/fish-small-mobile@2x.jpg 2x" width="140"
-                    height="144" alt="Cat Energy PRO 1000 г Курица">
-                </picture>
+                <a class="product__link-catalog" href="product.html">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1300px)" srcset="img/fish-small-desktop@1x.webp 1x, img/fish-small-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/fish-small-tablet@1x.webp 1x, img/fish-small-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/fish-small-mobile@1x.webp 1x, img/fish-small-mobile@2x.webp 2x">
+                    <source media="(min-width: 1300px)" srcset="img/fish-small-desktop@1x.png 1x, img/fish-small-desktop@2x.png 2x">
+                    <source media="(min-width: 768px)" srcset="img/fish-small-tablet@1x.png 1x, img/fish-small-tablet@2x.png 2x">
+                    <img class="product__photo-image" src="img/fish-small-mobile@1x.jpg" srcset="img/fish-small-mobile@2x.jpg 2x" width="140"
+                      height="144" alt="Cat Energy PRO 1000 г Курица">
+                  </picture>
+                </a>
               </div>
               <div class="product__info">
-                <h2 class="product__title">Cat Energy PRO 500 г</h2>
+                <h2 class="product__title"><a class="product__link-catalog" href="product.html">Cat Energy PRO 500 г</a></h2>
                 <table class="product__sheet">
                   <tr class=" product__sheet-item">
                     <td class="product__field">Объем</td>
@@ -135,23 +143,25 @@
                 </table>
               </div>
             </div>
-            <a class="button product__button" href="form.html">Заказать</a>
+            <a class="button product__button" href="order.html">Заказать</a>
           </li>
           <li class="product__item">
             <div class="product__wrapper">
               <div class="product__photo">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1300px)" srcset="img/fish-big-desktop@1x.webp 1x, img/fish-big-desktop@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/fish-big-tablet@1x.webp 1x, img/fish-big-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/fish-big-mobile@1x.webp 1x, img/fish-big-mobile@2x.webp 2x">
-                  <source media="(min-width: 1300px)" srcset="img/fish-big-desktop@1x.png 1x, img/fish-big-desktop@2x.png 2x">
-                  <source media="(min-width: 768px)" srcset="img/fish-big-tablet@1x.png 1x, img/fish-big-tablet@2x.png 2x">
-                  <img class="product__photo-image product__photo-image--big" src="img/fish-big-mobile@1x.jpg" srcset="img/fish-big-mobile@2x.jpg 2x" width="140" height="144"
-                    alt="Cat Energy PRO 1000 г Курица">
-                </picture>
+                <a class="product__link-catalog" href="product.html">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1300px)" srcset="img/fish-big-desktop@1x.webp 1x, img/fish-big-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/fish-big-tablet@1x.webp 1x, img/fish-big-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/fish-big-mobile@1x.webp 1x, img/fish-big-mobile@2x.webp 2x">
+                    <source media="(min-width: 1300px)" srcset="img/fish-big-desktop@1x.png 1x, img/fish-big-desktop@2x.png 2x">
+                    <source media="(min-width: 768px)" srcset="img/fish-big-tablet@1x.png 1x, img/fish-big-tablet@2x.png 2x">
+                    <img class="product__photo-image product__photo-image--big" src="img/fish-big-mobile@1x.jpg" srcset="img/fish-big-mobile@2x.jpg 2x" width="140" height="144"
+                      alt="Cat Energy PRO 1000 г Курица">
+                  </picture>
+                </a>
               </div>
               <div class="product__info">
-                <h2 class="product__title">Cat Energy PRO 1000 г</h2>
+                <h2 class="product__title"><a class="product__link-catalog" href="product.html">Cat Energy PRO 1000 г</a></h2>
                 <table class="product__sheet">
                   <tr class=" product__sheet-item">
                     <td class="product__field">Объем</td>
@@ -168,23 +178,25 @@
                 </table>
               </div>
             </div>
-            <a class="button product__button" href="form.html">Заказать</a>
+            <a class="button product__button" href="order.html">Заказать</a>
           </li>
           <li class="product__item product__item--mb">
             <div class="product__wrapper">
               <div class="product__photo">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1300px)" srcset="img/buckwheat-small-desktop@1x.webp 1x, img/buckwheat-small-desktop@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/buckwheat-small-tablet@1x.webp 1x, img/buckwheat-small-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/buckwheat-small-mobile@1x.webp 1x, img/buckwheat-small-mobile@2x.webp 2x">
-                  <source media="(min-width: 1300px)" srcset="img/buckwheat-small-desktop@1x.png 1x, img/buckwheat-small-desktop@2x.png 2x">
-                  <source media="(min-width: 768px)" srcset="img/buckwheat-small-tablet@1x.png 1x,img/buckwheat-small-tablet@2x.png 2x">
-                  <img class="product__photo-image" src="img/buckwheat-small-mobile@1x.jpg" srcset="img/buckwheat-small-mobile@2x.jpg 2x" width="140" height="144"
-                    alt="Cat Energy PRO 1000 г Курица">
-                </picture>
+                <a class="product__link-catalog" href="product.html">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1300px)" srcset="img/buckwheat-small-desktop@1x.webp 1x, img/buckwheat-small-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/buckwheat-small-tablet@1x.webp 1x, img/buckwheat-small-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/buckwheat-small-mobile@1x.webp 1x, img/buckwheat-small-mobile@2x.webp 2x">
+                    <source media="(min-width: 1300px)" srcset="img/buckwheat-small-desktop@1x.png 1x, img/buckwheat-small-desktop@2x.png 2x">
+                    <source media="(min-width: 768px)" srcset="img/buckwheat-small-tablet@1x.png 1x,img/buckwheat-small-tablet@2x.png 2x">
+                    <img class="product__photo-image" src="img/buckwheat-small-mobile@1x.jpg" srcset="img/buckwheat-small-mobile@2x.jpg 2x" width="140" height="144"
+                      alt="Cat Energy PRO 1000 г Курица">
+                  </picture>
+                </a>
               </div>
               <div class="product__info">
-                <h2 class="product__title">Cat Energy Slim 500 г</h2>
+                <h2 class="product__title"><a class="product__link-catalog" href="product.html">Cat Energy Slim 500 г</a></h2>
                 <table class="product__sheet">
                   <tr class=" product__sheet-item">
                     <td class="product__field">Объем</td>
@@ -201,23 +213,25 @@
                 </table>
               </div>
             </div>
-            <a class="button product__button" href="form.html">Заказать</a>
+            <a class="button product__button" href="order.html">Заказать</a>
           </li>
           <li class="product__item product__item--mb">
             <div class="product__wrapper">
               <div class="product__photo">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1300px)" srcset="img/buckwheat-big-desktop@1x.webp 1x, img/buckwheat-big-desktop@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/buckwheat-big-tablet@1x.webp 1x, img/buckwheat-big-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/buckwheat-big-mobile@1x.webp 1x, img/buckwheat-big-mobile@2x.webp 2x">
-                  <source media="(min-width: 1300px)" srcset="img/buckwheat-big-desktop@1x.png 1x, img/buckwheat-big-desktop@2x.png 2x">
-                  <source media="(min-width: 768px)" srcset="img/buckwheat-big-tablet@1x.png 1x, img/buckwheat-big-tablet@2x.png 2x">
-                  <img class="product__photo-image product__photo-image--big" src="img/buckwheat-big-mobile@1x.jpg" srcset="img/buckwheat-big-mobile@2x.jpg 2x" width="140" height="144"
-                    alt="Cat Energy PRO 1000 г Курица">
-                </picture>
+                <a class="product__link-catalog" href="product.html">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1300px)" srcset="img/buckwheat-big-desktop@1x.webp 1x, img/buckwheat-big-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/buckwheat-big-tablet@1x.webp 1x, img/buckwheat-big-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/buckwheat-big-mobile@1x.webp 1x, img/buckwheat-big-mobile@2x.webp 2x">
+                    <source media="(min-width: 1300px)" srcset="img/buckwheat-big-desktop@1x.png 1x, img/buckwheat-big-desktop@2x.png 2x">
+                    <source media="(min-width: 768px)" srcset="img/buckwheat-big-tablet@1x.png 1x, img/buckwheat-big-tablet@2x.png 2x">
+                    <img class="product__photo-image product__photo-image--big" src="img/buckwheat-big-mobile@1x.jpg" srcset="img/buckwheat-big-mobile@2x.jpg 2x" width="140" height="144"
+                      alt="Cat Energy PRO 1000 г Курица">
+                  </picture>
+                </a>
               </div>
               <div class="product__info">
-                <h2 class="product__title">Cat Energy Slim 1000 г</h2>
+                <h2 class="product__title"><a class="product__link-catalog" href="product.html">Cat Energy Slim 1000 г</a></h2>
                 <table class="product__sheet">
                   <tr class=" product__sheet-item">
                     <td class="product__field">Объем</td>
@@ -234,23 +248,25 @@
                 </table>
               </div>
             </div>
-            <a class="button product__button" href="form.html">Заказать</a>
+            <a class="button product__button" href="order.html">Заказать</a>
           </li>
           <li class="product__item product__item--last">
             <div class="product__wrapper">
               <div class="product__photo">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1300px)" srcset="img/rice-small-desktop@1x.webp 1x, img/rice-small-desktop@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/rice-small-tablet@1x.webp 1x, img/rice-small-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/rice-small-mobile@1x.webp 1x, img/rice-small-mobile@2x.webp 2x">
-                  <source media="(min-width: 1300px)" srcset="img/rice-small-desktop@1x.png 1x, img/rice-small-desktop@2x.png 2x">
-                  <source media="(min-width: 768px)" srcset="img/rice-small-tablet@1x.png 1x, img/rice-small-tablet@2x.png 2x">
-                  <img class="product__photo-image" src="img/rice-small-mobile@1x.jpg" width="140" height="144" srcset="img/rice-small-mobile@2x.jpg 2x"
-                    alt="Cat Energy PRO 1000 г Курица">
-                </picture>
+                <a class="product__link-catalog" href="product.html">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1300px)" srcset="img/rice-small-desktop@1x.webp 1x, img/rice-small-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/rice-small-tablet@1x.webp 1x, img/rice-small-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/rice-small-mobile@1x.webp 1x, img/rice-small-mobile@2x.webp 2x">
+                    <source media="(min-width: 1300px)" srcset="img/rice-small-desktop@1x.png 1x, img/rice-small-desktop@2x.png 2x">
+                    <source media="(min-width: 768px)" srcset="img/rice-small-tablet@1x.png 1x, img/rice-small-tablet@2x.png 2x">
+                    <img class="product__photo-image" src="img/rice-small-mobile@1x.jpg" width="140" height="144" srcset="img/rice-small-mobile@2x.jpg 2x"
+                      alt="Cat Energy PRO 1000 г Курица">
+                  </picture>
+                </a>
               </div>
               <div class="product__info">
-                <h2 class="product__title">Cat Energy Slim 500 г</h2>
+                <h2 class="product__title"><a class="product__link-catalog" href="product.html">Cat Energy Slim 500 г</a></h2>
                 <table class="product__sheet">
                   <tr class=" product__sheet-item">
                     <td class="product__field">Объем</td>
@@ -267,45 +283,44 @@
                 </table>
               </div>
             </div>
-            <a class="button product__button" href="form.html">Заказать</a>
+            <a class="button product__button" href="order.html">Заказать</a>
           </li>
           <li class="append">
-            <button class="append__more"></button>
             <p class="append__title">Показать еще 100500 товаров</p>
             <span class="append__text">На самом деле вкусов гораздо больше!</span>
-            <button class="append__to-all product__button button button--grey">Показать все</button>
+            <a class="append__to-all button button--grey" href="all-product.html">Показать все</a>
           </li>
         </ul>
       </div>
       <section class="add">
         <h2 class="add__title">Дополнительные товары</h2>
         <div class="add__wrapper">
-          <table class="add__table">
-            <tr class="add__table-item">
-              <td class="add__table-title">Сахарозаменитель</td>
-              <td class="add__table-value">1 упаковка (100 г)</td>
-              <td class="add__table-value add__table-value--small">200 Р.</td>
-              <td class="add__table-order"><button class="button add__table-button">Заказать</button></td>
-            </tr>
-            <tr class="add__table-item">
-              <td class="add__table-title">Питьевая вода</td>
-              <td class="add__table-value">5 литров</td>
-              <td class="add__table-value add__table-value--small">50 Р.</td>
-              <td class="add__table-order"><button class="button add__table-button">Заказать</button></td>
-            </tr>
-            <tr class="add__table-item">
-              <td class="add__table-title">Молоко</td>
-              <td class="add__table-value">1 литр</td>
-              <td class="add__table-value add__table-value--small">100 Р.</td>
-              <td class="add__table-order"><button class="button add__table-button">Заказать</button></td>
-            </tr>
-            <tr class="add__table-item">
-              <td class="add__table-title">Витамины</td>
-              <td class="add__table-value">1 упаковка (30 г)</td>
-              <td class="add__table-value add__table-value--small">300 Р.</td>
-              <td class="add__table-order"><button class="button add__table-button">Заказать</button></td>
-            </tr>
-          </table>
+          <ul class="add__table">
+            <li class="add__table-item">
+              <h3 class="add__table-title">Сахарозаменитель</h3>
+              <div class="add__table-value">1 упаковка (100 г)</div>
+              <div class="add__table-value add__table-value--small">200 Р.</div>
+              <div class="add__table-order"><button class="button add__table-button">Заказать</button></div>
+            </li>
+            <li class="add__table-item">
+              <h3 class="add__table-title">Питьевая вода</h3>
+              <div class="add__table-value">5 литров</div>
+              <div class="add__table-value add__table-value--small">50 Р.</div>
+              <div class="add__table-order"><button class="button add__table-button">Заказать</button></div>
+            </li>
+            <li class="add__table-item">
+              <h3 class="add__table-title">Молоко</h3>
+              <div class="add__table-value">1 литр</div>
+              <div class="add__table-value add__table-value--small">100 Р.</div>
+              <div class="add__table-order"><button class="button add__table-button">Заказать</button></div>
+            </li>
+            <li class="add__table-item">
+              <h3 class="add__table-title">Витамины</h3>
+              <div class="add__table-value">1 упаковка (30 г)</div>
+              <div class="add__table-value add__table-value--small">300 Р.</div>
+              <div class="add__table-order"><button class="button add__table-button">Заказать</button></div>
+            </li>
+          </ul>
           <div class="add__gift gift">
             <p class="gift__text">Закажите все и&nbsp;получите чехол для кота в подарок!</p>
           </div>
@@ -313,10 +328,11 @@
       </section>
       <section class="map">
         <div class="map__header">
-          <h3 class="map__title">Приглашаем к сотрудничеству дилеров!</h3>
+          <h3 class="map__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h3>
           <address class="map__text">ул. Большая Конюшенная, д. 19/8 <span class="map__city">Санкт-Петербург</span></address>
         </div>
-        <picture>
+        <div class="map__block map__block--no-js">
+          <picture>
             <source type="image/webp" media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x,img/bg-map-tablet@2x.webp 2x">
             <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
@@ -325,6 +341,8 @@
             <img class="map__image" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="362"
             alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
         </picture>
+        </div>
+        <div class="map__image" id="map"></div>
       </section>
     </main>
     <footer class="footer">
@@ -366,6 +384,63 @@
         </a>
       </div>
     </footer>
+    <script src="js/picturefill.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      ymaps.ready(init);
+      var myMap;
+
+      function init() {
+        if (document.body.clientWidth < 768) {
+          myMap = new ymaps.Map("map", {
+            center: [59.938631, 30.323055],
+            zoom: 17
+          });
+
+          myMap.behaviors.disable('scrollZoom');
+
+          var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/map-pin.png',
+            iconImageSize: [62, 53],
+            iconImageOffset: [-36, -53]
+          });
+
+          myMap.geoObjects.add(myPlacemark);
+        } else if (document.body.clientWidth >= 768 && document.body.clientWidth < 1300) {
+          myMap = new ymaps.Map("map", {
+            center: [59.938631, 30.323055],
+            zoom: 17
+          });
+
+          myMap.behaviors.disable('scrollZoom');
+
+          var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/map-pin.png',
+            iconImageSize: [124, 106],
+            iconImageOffset: [-36, -53]
+          });
+
+          myMap.geoObjects.add(myPlacemark);
+        } else if (document.body.clientWidth >= 1300) {
+          myMap = new ymaps.Map("map", {
+            center: [59.938963, 30.319293],
+            zoom: 17
+          });
+
+          myMap.behaviors.disable('scrollZoom');
+
+          var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/map-pin.png',
+            iconImageSize: [124, 106],
+            iconImageOffset: [-72, -106]
+          });
+
+          myMap.geoObjects.add(myPlacemark);
+        }
+      }
+    </script>
   </body>
 </html>

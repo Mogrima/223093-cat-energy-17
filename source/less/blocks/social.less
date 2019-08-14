@@ -5,12 +5,20 @@
 
 .social__list {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   width: 135px;
   margin: 0 auto;
-  padding: 25px 0;
+  padding: 22px 0 19px 0;
   list-style: none;
+}
+
+.social__item {
+  margin-right: 38px;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
 }
 
 .social__icon {
@@ -31,7 +39,12 @@
   }
 
   .social__list {
+    width: 126px;
     padding: 0;
+  }
+
+  .social__item {
+    margin-right: 28px;
   }
 
   .social__icon {

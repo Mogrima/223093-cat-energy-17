@@ -1,7 +1,6 @@
 .copyright {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   text-decoration: none;
 
   &:hover {
@@ -23,10 +22,15 @@
 
 .copyright__icon {
   fill: @icon-color;
+  margin-left: auto;
 }
 
 @media (min-width: @tablet-width) {
   .copyright {
     width: 162px;
+  }
+
+  .copyright__title {
+    margin-right: -1px;
   }
 }

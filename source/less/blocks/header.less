@@ -4,14 +4,14 @@
   flex-direction: column;
   width: @mobile-box;
   margin: 0 auto;
-  padding: 11px 20px 1px 20px;
+  padding: 13px 20px 0 20px;
 
   &::after {
     content: "";
     position: absolute;
     right: 0;
     left: 0;
-    bottom: 0;
+    bottom: -1px;
     width: 100%;
     height: 1px;
     background-color: @border-input;
@@ -28,7 +28,7 @@
     justify-content: space-between;
     width: @tablet-box;
     margin: 0 auto;
-    padding: 24px 0 0 0;
+    padding: 23px 0 0 0;
   }
 
   .header__logo {
@@ -59,7 +59,7 @@
         position: absolute;
         z-index: -10;
         right: 0;
-        top: 0;
+        top: 30px;
         bottom: 0;
         width: calc(100% / 2);
         height: 666px;
@@ -83,6 +83,7 @@
 
   .header__wrapper {
     width: @desktop-box;
+    padding-top: 54px;
 
     &::after {
       display: none;
