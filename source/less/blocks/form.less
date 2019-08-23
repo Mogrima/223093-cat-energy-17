@@ -6,7 +6,7 @@
 
 .form__wrapper {
   width: @mobile-box;
-  margin: 0 auto 31px auto;
+  margin: 0 auto 30px auto;
 }
 
 .form__desc {
@@ -112,6 +112,13 @@
 
   &--num {
     padding-left: 17px;
+  }
+
+  &:-ms-input-placeholder {
+    // .ff-reg();
+    // .link(@lh: @lh-text);
+    // color: @text-dark;
+    text-transform: uppercase;
   }
 }
 
@@ -321,6 +328,7 @@
     flex-wrap: wrap;
     box-sizing: border-box;
     width: @tablet-box;
+    margin-bottom: 32px;
     padding: 0 40px;
   }
 
@@ -533,7 +541,7 @@
 
   .form__wrapper {
     width: @desktop-box;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     padding: 0;
   }
 
