@@ -1,17 +1,36 @@
-.add {
-  width: 282px;
-  margin: 0 auto;
-}
-
 .add__wrapper {
-  margin-bottom: 33px;
+  width: 282px;
+  margin: 0 auto 33px auto;
 }
 
 .add__title {
-  margin: 0 0 34px 0;
+  position: relative;
+  width: 282px;
+  margin: 0 auto 34px auto;
+  margin-bottom: 34px;
   font-weight: normal;
   .title(@title: @fz-subtitle, @lh: @lh-value);
   color: @title-dark;
+  background-color: @bg-light;
+
+  span {
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+    padding-right: 22px;
+    background-color: @bg-light;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background-color: @bg-button;
+  }
 }
 
 .add__table {
@@ -69,18 +88,37 @@
 }
 
 @media (min-width: @tablet-width) {
-  .add {
-    width: @tablet-box;
-  }
-
   .add__wrapper {
+    width: @tablet-box;
     margin-bottom: 109px;
   }
 
   .add__title {
-    margin-bottom: 80px;
-    padding-left: 36px;
+    box-sizing: border-box;
+    width: @tablet-width;
+    margin: 0 auto 80px auto;
     .title(@title: 36px, @lh: 36px);
+
+    span {
+      margin-left: 67px;
+      padding-right: 35px;
+      box-shadow: -40px 0 0 0 @bg-light;
+    }
+
+    &::after {
+      top: 22px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -2;
+      top: 22px;
+      box-sizing: border-box;
+      width: 100%;
+      height: 3px;
+      background-color: @bg-button;
+    }
   }
 
   .add__table {
@@ -141,20 +179,23 @@
 }
 
 @media (min-width: @desktop-width) {
-  .add {
-    width: @desktop-box;
-    padding: 0 40px;
-  }
-
   .add__wrapper {
     display: flex;
     justify-content: space-between;
+    width: @desktop-box;
     margin-bottom: 88px;
+    padding: 0 40px;
   }
 
   .add__title {
+    width: @desktop-width;
     margin-bottom: 80px;
     padding-left: 0;
+
+    span {
+      margin-left: 0;
+      padding-left: 39px;
+    }
   }
 
   .add__table {
