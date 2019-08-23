@@ -45,31 +45,31 @@
   font-size: @fz-subtitle;
   line-height: @lh-value;
   color: @title-dark;
-}
 
-.form__title--decor {
-  position: relative;
-  width: 100%;
-  background-color: @bg-light;
-
-  span {
+  &--decor {
     position: relative;
-    z-index: 10;
-    display: inline-block;
-    max-width: 189px;
-    padding-right: 20px;
-    background-color: @bg-light;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 10px;
-    left: 0;
-    right: 0;
     width: 100%;
-    height: 3px;
-    background-color: @bg-button;
+    background-color: @bg-light;
+
+    span {
+      position: relative;
+      z-index: 10;
+      display: inline-block;
+      max-width: 189px;
+      padding-right: 21px;
+      background-color: @bg-light;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 14px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 3px;
+      background-color: @bg-button;
+    }
   }
 }
 
@@ -355,27 +355,32 @@
   }
 
   .form__title {
+    max-width: 100%;
     margin-bottom: 76px;
     .title(@lh: 36px);
 
-    max-width: 100%;
-  }
+    &--decor {
+      span {
+        max-width: 100%;
+        padding-right: 40px;
+        box-shadow: -40px 0 0 0 @bg-light;
+      }
 
-  .form__title--decor {
-    span {
-      max-width: 100%;
-    }
+      &::after {
+        top: 22px;
+      }
 
-    &::before {
-      content: "";
-      position: absolute;
-      z-index: -2;
-      top: 0;
-      left: -40px;
-      box-sizing: border-box;
-      width: 100%;
-      height: 3px;
-      background-color: @bg-button;
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: -2;
+        top: 22px;
+        left: -40px;
+        box-sizing: border-box;
+        width: 100%;
+        height: 3px;
+        background-color: @bg-button;
+      }
     }
   }
 
@@ -516,7 +521,6 @@
   .form {
     width: @desktop-width;
   }
-
 
   .form__main-title {
     margin-left: 40px;
