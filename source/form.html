@@ -5,6 +5,10 @@
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
+    <link rel="preload" href="fonts/oswaldregular.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldmedium.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.min.css">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=41194236-2233-459b-aeb2-f43bf3e3dc48&lang=ru_RU">
@@ -57,24 +61,24 @@
           </fieldset>
           <fieldset class="form__item form__item--border form__item-radio">
             <legend class="visually-hidden">Выбор программы</legend>
-            <label class="form__label form__label-radio">
+            <label class="form__label form__label-radio" tabindex="0">
               <input class="form__radio" type="radio" name="programm" value="slim" checked>
               <span class="form__radio-indicator"></span>
               Похудение
             </label>
-            <label class="form__label form__label-radio">
+            <label class="form__label form__label-radio" tabindex="0">
               <input class="form__radio" type="radio" name="programm" value="pro">
               <span class="form__radio-indicator"></span>
               Набор массы
             </label>
-            <label class="form__label form__label-radio">
+            <label class="form__label form__label-radio" tabindex="0">
               <input class="form__radio" type="radio" name="programm" value="unknown">
               <span class="form__radio-indicator"></span>
               Не знаю (Нужен ваш совет)
             </label>
           </fieldset>
           <fieldset class="form__item form__item--owner">
-            <legend class="form__title">Контактные данные (владельца кота)</legend>
+            <legend class="form__title form__title--decor"><span>Контактные данные (владельца кота)</span></legend>
             <div class="form__owner-wrapper">
             <label class="form__label form__label-input"><span class="form__label-name">E-mail:*</span>
               <input class="form__input" type="email" name="owner-email" placeholder="kuklachev@gmail.com" minlength="10"
@@ -93,31 +97,32 @@
             </div>
           </fieldset>
           <fieldset class="form__item form__item--comments">
-            <legend class="form__title form__title--comments">Комментарий</legend>
+            <legend class="form__title form__title--comments form__title--decor">
+                <span>Комментарий</span></legend>
             <label><span class="visually-hidden">Повадки кота</span>
               <textarea class="form__textarea" name="comment" cols="30" rows="10"
                 placeholder="Расскажите обо всех повадках кота"></textarea>
             </label>
           </fieldset>
           <fieldset class="form__item form__item--last">
-            <legend class="form__title form__title--check">Дополнительно</legend>
+            <legend class="form__title form__title--check form__title--decor"><span>Дополнительно</span></legend>
             <div class="form__add-wrapper">
-              <label class="form__label form__label-check">
+              <label class="form__label form__label-check" tabindex="0">
                 <input class="form__checkbox" type="checkbox" name="additive" value="sweetener" checked>
                 <span class="form__checkbox-indicator"></span>
                 Сахарозаменитель
               </label>
-              <label class="form__label form__label-check">
+              <label class="form__label form__label-check" tabindex="0">
                 <input class="form__checkbox" type="checkbox" name="additive" value="water">
                 <span class="form__checkbox-indicator"></span>
                 Питьевая вода
               </label>
-              <label class="form__label form__label-check">
+              <label class="form__label form__label-check" tabindex="0">
                 <input class="form__checkbox" type="checkbox" name="additive" value="milk">
                 <span class="form__checkbox-indicator"></span>
                 Молоко
               </label>
-              <label class="form__label form__label-check">
+              <label class="form__label form__label-check" tabindex="0">
                 <input class="form__checkbox" type="checkbox" name="additive" value="vitamins">
                 <span class="form__checkbox-indicator"></span>
                 Витамины
