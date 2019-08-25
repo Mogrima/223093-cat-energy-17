@@ -1,16 +1,15 @@
 // common styles for the form
 .form {
-  width: @modile-width;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .form__wrapper {
-  width: @mobile-box;
-  margin: 0 auto 30px auto;
+  margin: 0 -20px 30px -20px;
 }
 
 .form__desc {
-  margin: 0 0 38px 20px;
+  margin: 0 0 38px 0;
   padding: 26px 30px 0 0;
   line-height: @lh-text;
   color: @title-dark;
@@ -18,19 +17,17 @@
 }
 
 .form__main-title {
-  margin-left: 20px;
   padding-top: 16px;
 }
 
 .form__item {
-  display: flex;
-  flex-direction: column;
   margin: 0 0 30px 0;
   padding: 0;
   border: none;
 
   &--border {
     margin-bottom: 0;
+    padding: 0 20px;
     padding-bottom: 23px;
     border-bottom: 1px solid @border-product;
   }
@@ -41,6 +38,7 @@
 }
 
 .form__title {
+  display: inline-block;
   margin-bottom: 34px;
   font-size: @fz-subtitle;
   line-height: @lh-value;
@@ -48,28 +46,24 @@
 
   &--decor {
     position: relative;
-    width: 100%;
+    padding: 0 22px 0 19px;
     background-color: @bg-light;
-
-    span {
-      position: relative;
-      z-index: 10;
-      display: inline-block;
-      max-width: 189px;
-      padding-right: 21px;
-      background-color: @bg-light;
-    }
 
     &::after {
       content: "";
       position: absolute;
+      z-index: -10;
       top: 14px;
       left: 0;
       right: 0;
-      width: 100%;
+      width: 100vw;
       height: 3px;
       background-color: @bg-button;
     }
+  }
+
+  span {
+    display: block;
   }
 }
 
@@ -79,6 +73,12 @@
   color: @title-table;
   text-transform: uppercase;
   cursor: pointer;
+
+  &--comments {
+    display: block;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
 }
 
 .form__input::placeholder,
@@ -115,9 +115,6 @@
   }
 
   &:-ms-input-placeholder {
-    // .ff-reg();
-    // .link(@lh: @lh-text);
-    // color: @text-dark;
     text-transform: uppercase;
   }
 }
@@ -143,7 +140,7 @@
 
 .form__textarea {
   box-sizing: border-box;
-  width: 280px;
+  width: 100%;
   height: 150px;
   padding: 12px 0 0 14px;
   border: 1px solid @border-input;
@@ -157,8 +154,8 @@
 }
 
 .form__button {
-  width: 100%;
-  margin-bottom: 21px;
+  width: @mobile-box;
+  margin: 0 auto 21px auto;
 }
 
 .form__sign {
@@ -187,6 +184,10 @@
   margin-right: 14px;
 }
 
+.form__owner-wrapper {
+  padding: 0 20px;
+}
+
 .form__item--owner {
   margin-bottom: 28px;
 
@@ -206,7 +207,7 @@
 // for radio form
 .form__item-radio {
   margin-bottom: 28px;
-  padding: 20px 0 19px 0;
+  padding: 20px 20px 19px 20px;
 }
 
 .form__label-radio {
@@ -231,6 +232,7 @@
 // for checkbox form
 .form__add-wrapper {
   display: block;
+  padding: 0 20px;
 }
 
 .form__title--check {
@@ -320,26 +322,27 @@
 @media (min-width: @tablet-width) {
   // common styles for the form
   .form {
-    width: @tablet-width;
+    max-width: @tablet-width;
+    margin: 0 auto 0 auto;
+    padding: 0 30px;
   }
 
   .form__wrapper {
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
-    width: @tablet-box;
-    margin-bottom: 32px;
+    margin: 0 0 32px 0;
     padding: 0 40px;
   }
 
   .form__main-title {
-    margin-left: 30px;
+    margin-left: 0;
     padding-top: 53px;
   }
 
   .form__desc {
     width: 325px;
-    margin-left: 70px;
+    margin-left: 40px;
     margin-bottom: 66px;
     padding-top: 55px;
     .text(@fz: 20px, @lh: 30px);
@@ -350,6 +353,8 @@
     margin-bottom: 65px;
 
     &--border {
+      padding-left: 0;
+      padding-right: 0;
       margin-bottom: 48px;
     }
 
@@ -365,13 +370,14 @@
   .form__title {
     max-width: 100%;
     margin-bottom: 76px;
+    padding-right: 40px;
+    padding-left: 0;
     .title(@lh: 36px);
+    box-shadow: -40px 0 0 0 @bg-light;
 
     &--decor {
       span {
-        max-width: 100%;
-        padding-right: 40px;
-        box-shadow: -40px 0 0 0 @bg-light;
+        display: inline;
       }
 
       &::after {
@@ -383,9 +389,9 @@
         position: absolute;
         z-index: -2;
         top: 22px;
-        left: -40px;
+        right: 100%;
         box-sizing: border-box;
-        width: 100%;
+        width: 100vw;
         height: 3px;
         background-color: @bg-button;
       }
@@ -395,6 +401,10 @@
   .form__label {
     margin-bottom: 20px;
     .text(@fz: 20px, @lh: 30px);
+
+    &--comments {
+      padding: 0;
+    }
   }
 
   .form__input::placeholder,
@@ -431,6 +441,7 @@
 
   .form__button {
     width: 283px;
+    margin: 0;
     margin-bottom: 73px;
     padding: 16px 0;
     font-size: @fz-nav;
@@ -453,6 +464,10 @@
 
   .form__label-name {
     margin-right: 17px;
+  }
+
+  .form__owner-wrapper {
+    padding: 0;
   }
 
   .form__item--owner {
@@ -491,6 +506,8 @@
   .form__add-wrapper {
     display: flex;
     flex-wrap: wrap;
+    min-width: 688px;
+    padding: 0;
   }
 
   .form__label-check {
@@ -527,27 +544,36 @@
 @media (min-width: @desktop-width) {
   // common styles for the form
   .form {
-    width: @desktop-width;
+    max-width: @desktop-width;
+    padding: 0 40px;
   }
 
   .form__main-title {
-    margin-left: 40px;
     padding-top: 68px;
   }
 
   .form__desc {
-    margin-left: 40px;
+    margin-left: 0;
   }
 
   .form__wrapper {
-    width: @desktop-box;
     margin-bottom: 10px;
     padding: 0;
   }
 
+  .form__title {
+    &--decor {
+      box-shadow: none;
+    }
+
+    &::before {
+      margin-right: 30px;
+    }
+  }
+
   .form__item {
     &--border {
-      width: 570px;
+      width: calc(50% - 40px);
       margin-bottom: 0;
       border: none;
     }
@@ -579,7 +605,7 @@
   }
 
   .form__textarea {
-    width: 1220px;
+    width: @desktop-box;
     height: 174px;
     padding: 10px 0 0 18px;
   }
@@ -596,6 +622,7 @@
   .form__owner-wrapper {
     display: flex;
     flex-wrap: wrap;
+    min-width: @desktop-box;
   }
 
   .form__owner-wrapper .form__label-input {
@@ -618,6 +645,10 @@
   .form__item-radio {
     margin-left: 80px;
     margin-bottom: 0;
+  }
+
+  .form__add-wrapper {
+    min-width: @desktop-box;
   }
 
   .form__label-check {
