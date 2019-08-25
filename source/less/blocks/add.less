@@ -1,13 +1,19 @@
+.add {
+  box-sizing: border-box;
+  width: @modile-width;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .add__wrapper {
-  width: 282px;
   margin: 0 auto 33px auto;
 }
 
 .add__title {
   position: relative;
-  width: 282px;
-  margin: 0 auto 34px auto;
-  margin-bottom: 34px;
+  display: inline-block;
+  margin: 0 auto 34px 0;
+  padding-right: 22px;
   font-weight: normal;
   .title(@title: @fz-subtitle, @lh: @lh-value);
   color: @title-dark;
@@ -16,18 +22,16 @@
   span {
     position: relative;
     z-index: 10;
-    display: inline-block;
-    padding-right: 22px;
-    background-color: @bg-light;
   }
 
   &::after {
     content: "";
     position: absolute;
+    z-index: -10;
     top: 14px;
     left: 0;
     right: 0;
-    width: 100%;
+    width: 100vw;
     height: 3px;
     background-color: @bg-button;
   }
@@ -88,22 +92,22 @@
 }
 
 @media (min-width: @tablet-width) {
+  .add {
+    width: @tablet-width;
+    padding: 0 30px;
+  }
+
   .add__wrapper {
-    width: @tablet-box;
     margin-bottom: 109px;
   }
 
   .add__title {
     box-sizing: border-box;
-    width: @tablet-width;
-    margin: 0 auto 80px auto;
+    margin: 0 auto 80px 37px;
     .title(@title: 36px, @lh: 36px);
-
-    span {
-      margin-left: 67px;
-      padding-right: 35px;
-      box-shadow: -40px 0 0 0 @bg-light;
-    }
+    padding-right: 37px;
+    padding-left: 0;
+    box-shadow: -40px 0 0 0 @bg-light;
 
     &::after {
       top: 22px;
@@ -114,8 +118,9 @@
       position: absolute;
       z-index: -2;
       top: 22px;
+      right: 100%;
       box-sizing: border-box;
-      width: 100%;
+      width: 100vw;
       height: 3px;
       background-color: @bg-button;
     }
@@ -179,18 +184,22 @@
 }
 
 @media (min-width: @desktop-width) {
-  .add__wrapper {
-    display: flex;
-    justify-content: space-between;
-    width: @desktop-box;
-    margin-bottom: 88px;
+  .add {
+    width: @desktop-width;
     padding: 0 40px;
   }
 
+  .add__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 88px;
+  }
+
   .add__title {
-    width: @desktop-width;
     margin-bottom: 80px;
+    margin-left: 0;
     padding-left: 0;
+    box-shadow: -30px 0 0 0 @bg-light;
 
     span {
       margin-left: 0;
